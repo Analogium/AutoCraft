@@ -1,0 +1,46 @@
+{
+  "positions": {
+    "transmutation": [
+      92,
+      334
+    ],
+    "alteration": [
+      144,
+      346
+    ],
+    "augmentation": [
+      252,
+      390
+    ],
+    "regal": [
+      451,
+      341
+    ],
+    "exalted": [
+      322,
+      328
+    ],
+    "scouring": [
+      448,
+      458
+    ]
+  },
+  "item_positions": [
+    [
+      1422,
+      658
+    ],
+    [
+      1422,
+      702
+    ]
+  ],
+  "notables": [
+    "Low Tolerance",
+    "Eldritch Inspiration"
+  ],
+  "csv_path": "/mnt/c/Users/Theo/Downloads/cluster-combinations.csv",
+  "delay_min": 0.15,
+  "delay_max": 0.45,
+  "max_iterations": 5000
+}
