@@ -225,3 +225,28 @@ Added Small Passive Skills also grant: +4 to Maximum Energy Shield
 1 Added Passive Skill is Brush with Death
 --------
 Place into an allocated Medium or Large Jewel Socket on the Passive Skill Tree. Added passives do not interact with jewel radiuses. Right click to remove from the Socket.
+
+Control + Alt + C
+
+Item Class: Jewels
+Rarity: Magic
+Hazardous Medium Cluster Jewel of the Wrestler
+--------
+Requirements:
+Level: 54
+--------
+Item Level: 83
+--------
+Adds 4 Passive Skills (enchant)
+(Added Passive Skills are never considered to be in Radius by other Jewels) (enchant)
+(All Added Passive Skills are Small unless otherwise specified) (enchant)
+1 Added Passive Skill is a Jewel Socket (enchant)
+Added Small Passive Skills grant: 12% increased Chaos Damage over Time (enchant)
+(Passive Skills that are not Notable, Masteries, Keystones, or Jewel Sockets are Small) (enchant)
+--------
+{ Prefix Modifier "Hazardous" (Tier: 2) — Damage }
+Added Small Passive Skills also grant: 3% increased Damage
+{ Suffix Modifier "of the Wrestler" (Tier: 2) — Attribute }
+Added Small Passive Skills also grant: +4(4-5) to Strength
+--------
+Place into an allocated Medium or Large Jewel Socket on the Passive Skill Tree. Added passives do not interact with jewel radiuses. Right click to remove from the Socket.

@@ -118,14 +118,16 @@ class WinInputBridge:
         self._run("Set-Clipboard -Value 'AUTOCRAFT_CLEAR'")
 
     def ctrl_c(self, x: int, y: int):
-        """Move to (x,y) and send Ctrl+C to copy the hovered POE item."""
+        """Move to (x,y) and send Ctrl+Alt+C to copy the hovered POE item with prefix/suffix info."""
         self._run(
             f"[WinInput]::SetCursorPos({x},{y});"
             f"Start-Sleep -Milliseconds 250;"
             f"[WinInput]::keybd_event(0x11,0,0,0);"    # CTRL down
+            f"[WinInput]::keybd_event(0x12,0,0,0);"    # ALT down
             f"[WinInput]::keybd_event(0x43,0,0,0);"    # C down
             f"Start-Sleep -Milliseconds 40;"
             f"[WinInput]::keybd_event(0x43,0,2,0);"    # C up
+            f"[WinInput]::keybd_event(0x12,0,2,0);"    # ALT up
             f"[WinInput]::keybd_event(0x11,0,2,0)"     # CTRL up
         )
 

@@ -14,10 +14,15 @@ Workflow:
 import time
 import random
 import threading
+import json
+import os
+from datetime import datetime
 
 from .item_parser import parse_item_text, ParsedItem
 from .conditions import all_notables_present, any_notable_present, matches_any_combination, needs_augmentation
 from .win_input import WinInputBridge
+
+SESSIONS_LOG = os.path.join(os.path.dirname(os.path.dirname(__file__)), "sessions.json")
 
 
 class CraftSession:
@@ -49,6 +54,7 @@ class CraftSession:
         self.count_exalteds = 0
         self.count_scourings = 0
         self.count_full_cycles = 0
+        self.count_items_crafted = 0
 
     # ------------------------------------------------------------------
     # Public interface
@@ -156,16 +162,27 @@ class CraftSession:
                         self._stop_event.set()
                         break
 
-                    if needs_augmentation(item):
-                        self.log("Augmentation (1 seul affix)…")
-                        self._apply_currency(positions["augmentation"], item_pos)
-                        self.count_augmentations += 1
-                        self._wait()
-                        item = self._read_item(item_pos)
-                        if item is None:
-                            self.log("ERROR: Could not read item after Augmentation.")
-                            self._stop_event.set()
-                            break
+                    # Augmentation decision (magic with 1 affix only):
+                    # Only skip augment if the single affix is a prefix that is NOT a notable
+                    # (augment would add a suffix which can never be a notable → useless)
+                    # All other cases: augment (1 suffix → augment adds prefix that could be notable)
+                    if item.rarity == "Magic" and item.num_affixes == 1:
+                        has_affix_info = bool(item.prefix_mods or item.suffix_mods)
+                        is_non_notable_prefix = (
+                            has_affix_info
+                            and item.num_prefixes == 1
+                            and not any(item.has_notable(n) for n in required)
+                        )
+                        if not is_non_notable_prefix:
+                            self.log("Augmentation (1 seul affix)…")
+                            self._apply_currency(positions["augmentation"], item_pos)
+                            self.count_augmentations += 1
+                            self._wait()
+                            item = self._read_item(item_pos)
+                            if item is None:
+                                self.log("ERROR: Could not read item after Augmentation.")
+                                self._stop_event.set()
+                                break
 
                     found   = [n for n in required if item.has_notable(n)]
                     missing = [n for n in required if not item.has_notable(n)]
@@ -182,18 +199,27 @@ class CraftSession:
                 self._apply_currency(positions["regal"], item_pos)
                 self.count_regals += 1
                 self._wait()
-
-                # Step 6: Exalted Orb
-                self.log("Exalted Orb…")
-                self._apply_currency(positions["exalted"], item_pos)
-                self.count_exalteds += 1
-                self._wait()
-
-                # Step 7: Final check
                 item = self._read_item(item_pos)
                 if item is None:
-                    self.log("ERROR: Could not read item after Exalted.")
+                    self.log("ERROR: Could not read item after Regal.")
                     break
+
+                # Step 6: Exalted Orb — skip if item already has 2 prefixes
+                # (exalt would only add a suffix; no more room for a notable prefix)
+                has_affix_info = bool(item.prefix_mods or item.suffix_mods)
+                if has_affix_info and item.num_prefixes >= 2:
+                    self.log(f"Regal a ajouté un préfixe ({item.num_prefixes} préfixes) → Exalt inutile.")
+                else:
+                    self.log("Exalted Orb…")
+                    self._apply_currency(positions["exalted"], item_pos)
+                    self.count_exalteds += 1
+                    self._wait()
+                    item = self._read_item(item_pos)
+                    if item is None:
+                        self.log("ERROR: Could not read item after Exalted.")
+                        break
+
+                # Step 7: Final check
 
                 self.log(f"Mods finaux: {item.all_mods}")
 
@@ -203,6 +229,7 @@ class CraftSession:
                 )
                 if matched:
                     self.log(f"✅ SUCCÈS item {current_item_idx + 1}/{total_items} — Combo: {matched}")
+                    self.count_items_crafted += 1
                     self._print_stats()
                     current_item_idx += 1
                     iteration = 0
@@ -307,3 +334,30 @@ class CraftSession:
             f"Scour: {self.count_scourings} | "
             f"Cycles: {self.count_full_cycles}"
         )
+        self._save_session_report()
+
+    def _save_session_report(self):
+        entry = {
+            "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "combinations": self.config.get("required_combinations", []),
+            "currencies": {
+                "Transmutation": self.count_transmutations,
+                "Alteration":    self.count_alterations,
+                "Augmentation":  self.count_augmentations,
+                "Regal":         self.count_regals,
+                "Exalted":       self.count_exalteds,
+                "Scouring":      self.count_scourings,
+            },
+            "cycles": self.count_full_cycles,
+            "items_crafted": self.count_items_crafted,
+        }
+        try:
+            sessions = []
+            if os.path.exists(SESSIONS_LOG):
+                with open(SESSIONS_LOG, "r", encoding="utf-8") as f:
+                    sessions = json.load(f)
+            sessions.append(entry)
+            with open(SESSIONS_LOG, "w", encoding="utf-8") as f:
+                json.dump(sessions, f, indent=2, ensure_ascii=False)
+        except Exception as e:
+            self.log(f"  [warn] Impossible d'écrire sessions.json : {e}")

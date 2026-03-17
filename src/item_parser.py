@@ -21,6 +21,8 @@ class ParsedItem:
     implicits: List[str] = field(default_factory=list)
     explicits: List[str] = field(default_factory=list)
     crafted_mods: List[str] = field(default_factory=list)
+    prefix_mods: List[str] = field(default_factory=list)   # subset of explicits tagged as prefix
+    suffix_mods: List[str] = field(default_factory=list)   # subset of explicits tagged as suffix
     is_corrupted: bool = False
 
     @property
@@ -31,6 +33,14 @@ class ParsedItem:
     def num_affixes(self) -> int:
         """Number of explicit + crafted affixes (not implicits)."""
         return len(self.explicits) + len(self.crafted_mods)
+
+    @property
+    def num_prefixes(self) -> int:
+        return len(self.prefix_mods)
+
+    @property
+    def num_suffixes(self) -> int:
+        return len(self.suffix_mods)
 
     def has_notable(self, name: str) -> bool:
         """
@@ -196,8 +206,22 @@ def _is_meta_section(lines: List[str]) -> bool:
 
 def _classify_mods(lines: List[str], item: ParsedItem, as_implicits: bool):
     skip = {"Corrupted", "Unidentified", "Mirrored"}
+    next_is_prefix = False
+    next_is_suffix = False
     for line in lines:
+        # Filter parenthesized explanation lines from Ctrl+Alt+C format: (All Added Passive Skills...)
+        if line.startswith("("):
+            continue
         if line in skip or line.startswith("Note:"):
+            continue
+        # Detect Ctrl+Alt+C affix type headers: { Prefix Modifier "..." } / { Suffix Modifier "..." }
+        if line.startswith("{ Prefix"):
+            next_is_prefix = True
+            next_is_suffix = False
+            continue
+        if line.startswith("{ Suffix"):
+            next_is_suffix = True
+            next_is_prefix = False
             continue
         if "(crafted)" in line:
             item.crafted_mods.append(line.replace(" (crafted)", "").strip())
@@ -205,3 +229,9 @@ def _classify_mods(lines: List[str], item: ParsedItem, as_implicits: bool):
             item.implicits.append(line)
         else:
             item.explicits.append(line)
+            if next_is_prefix:
+                item.prefix_mods.append(line)
+            elif next_is_suffix:
+                item.suffix_mods.append(line)
+        next_is_prefix = False
+        next_is_suffix = False
