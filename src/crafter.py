@@ -109,11 +109,13 @@ class CraftSession:
             return
         self.log("Bridge OK.")
 
-        self.log("Pour arrêter : Alt+Tab vers AutoCraft")
+        self.log("Pour arrêter : F6 ou Alt+Tab vers AutoCraft")
         self.log("Retournez dans POE maintenant…")
         for i in range(5, 0, -1):
             self.log(f"  Démarrage dans {i}s…")
-            time.sleep(1)
+            if self._stop_event.wait(timeout=1.0):
+                self.log("Arrêt demandé.")
+                return
         self.status("Running")
 
         item_positions = cfg.get("item_positions", [])
@@ -277,7 +279,12 @@ class CraftSession:
             self.config.get("delay_min", 0.15),
             self.config.get("delay_max", 0.45),
         )
-        time.sleep(d)
+        # Sleep in small steps so stop can interrupt immediately
+        end = time.time() + d
+        while time.time() < end:
+            if self._stop_event.is_set():
+                return
+            time.sleep(0.05)
         # Block here if paused, until resumed or stopped
         self._pause_event.wait()
 
@@ -321,6 +328,8 @@ class CraftSession:
             deadline        = time.time() + 3.0
             change_deadline = time.time() + 2.0
             while time.time() < deadline:
+                if self._stop_event.is_set():
+                    return None
                 time.sleep(0.1)
                 text = self._win.read_clipboard()
                 if text and text != "AUTOCRAFT_CLEAR" and "--------" in text:

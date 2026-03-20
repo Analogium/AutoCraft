@@ -50,10 +50,18 @@ class AutoCraftApp(tk.Tk):
         notebook = self._notebook = ttk.Notebook(self)
         notebook.pack(fill="both", expand=True, padx=8, pady=8)
 
-        self._tab_config = ttk.Frame(notebook)
-        self._tab_log   = ttk.Frame(notebook)
-        notebook.add(self._tab_config, text="  Configuration  ")
+        self._tab_crafts = ttk.Frame(notebook)
+        self._tab_log    = ttk.Frame(notebook)
+        notebook.add(self._tab_crafts, text="  Craft  ")
         notebook.add(self._tab_log,    text="  Log  ")
+
+        # Sub-notebook for craft modes
+        self._crafts_notebook = ttk.Notebook(self._tab_crafts)
+        self._crafts_notebook.pack(fill="both", expand=True)
+
+        self._tab_double_cluster = ttk.Frame(self._crafts_notebook)
+        self._crafts_notebook.add(self._tab_double_cluster,
+                                  text="  Double Passifs Cluster Craft  ")
 
         self._build_config_tab()
         self._build_log_tab()
@@ -62,7 +70,7 @@ class AutoCraftApp(tk.Tk):
     # ---- Config tab --------------------------------------------------
 
     def _build_config_tab(self):
-        parent = self._tab_config
+        parent = self._tab_double_cluster
         row = 0
 
         # --- Item positions section ---
