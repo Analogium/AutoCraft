@@ -43,6 +43,8 @@ class CraftSession:
         self.status = status_callback
 
         self._stop_event = threading.Event()
+        self._pause_event = threading.Event()
+        self._pause_event.set()  # not paused by default
         self._thread: threading.Thread | None = None
         self._win = WinInputBridge()
 
@@ -55,6 +57,8 @@ class CraftSession:
         self.count_scourings = 0
         self.count_full_cycles = 0
         self.count_items_crafted = 0
+
+        self._last_item_text = ""   # last raw clipboard text successfully read
 
     # ------------------------------------------------------------------
     # Public interface
@@ -69,6 +73,16 @@ class CraftSession:
 
     def stop(self):
         self._stop_event.set()
+        self._pause_event.set()  # unblock any waiting pause so the thread can exit
+
+    def pause(self):
+        self._pause_event.clear()
+
+    def resume(self):
+        self._pause_event.set()
+
+    def is_paused(self) -> bool:
+        return not self._pause_event.is_set()
 
     def is_running(self) -> bool:
         return self._thread is not None and self._thread.is_alive()
@@ -144,7 +158,7 @@ class CraftSession:
                     self._apply_currency(positions["transmutation"], item_pos)
                     self.count_transmutations += 1
                     self._wait()
-                    item = self._read_item(item_pos)
+                    item = self._read_item(item_pos, expect_change=True)
                     if item is None:
                         self.log("ERROR: Could not read item after Transmutation.")
                         break
@@ -156,7 +170,7 @@ class CraftSession:
                     self.count_alterations += 1
                     alt_count += 1
                     self._wait()
-                    item = self._read_item(item_pos)
+                    item = self._read_item(item_pos, expect_change=True)
                     if item is None:
                         self.log("ERROR: Could not read item during Alteration loop.")
                         self._stop_event.set()
@@ -178,7 +192,7 @@ class CraftSession:
                             self._apply_currency(positions["augmentation"], item_pos)
                             self.count_augmentations += 1
                             self._wait()
-                            item = self._read_item(item_pos)
+                            item = self._read_item(item_pos, expect_change=True)
                             if item is None:
                                 self.log("ERROR: Could not read item after Augmentation.")
                                 self._stop_event.set()
@@ -199,7 +213,7 @@ class CraftSession:
                 self._apply_currency(positions["regal"], item_pos)
                 self.count_regals += 1
                 self._wait()
-                item = self._read_item(item_pos)
+                item = self._read_item(item_pos, expect_change=True)
                 if item is None:
                     self.log("ERROR: Could not read item after Regal.")
                     break
@@ -214,7 +228,7 @@ class CraftSession:
                     self._apply_currency(positions["exalted"], item_pos)
                     self.count_exalteds += 1
                     self._wait()
-                    item = self._read_item(item_pos)
+                    item = self._read_item(item_pos, expect_change=True)
                     if item is None:
                         self.log("ERROR: Could not read item after Exalted.")
                         break
@@ -264,6 +278,8 @@ class CraftSession:
             self.config.get("delay_max", 0.45),
         )
         time.sleep(d)
+        # Block here if paused, until resumed or stopped
+        self._pause_event.wait()
 
     def _jitter(self, x: int, y: int, radius: int = 3) -> tuple:
         return (
@@ -279,11 +295,14 @@ class CraftSession:
         time.sleep(random.uniform(0.08, 0.15))
         self._win.left_click(ix, iy)
 
-    def _read_item(self, item_pos: tuple, log_mods: bool = False) -> "ParsedItem | None":
+    def _read_item(self, item_pos: tuple, log_mods: bool = False, expect_change: bool = False) -> "ParsedItem | None":
         """
         Send Ctrl+C on the item, then wait until the Windows clipboard content
         CHANGES from what it was before — guarantees we read fresh stats.
         Uses the PowerShell bridge exclusively (no WSL2/X11 clipboard).
+
+        If expect_change=True, also rejects text identical to the last successfully
+        read item (prevents reading a stale pre-currency state after a currency apply).
         """
         ix, iy = self._jitter(*item_pos)
 
@@ -295,14 +314,18 @@ class CraftSession:
             # 2. Move to item and send Ctrl+C
             self._win.ctrl_c(ix, iy)
 
-            # 3. Poll until clipboard has fresh POE item (not the sentinel, has separator)
+            # 3. Poll until clipboard has fresh POE item (not the sentinel, has separator,
+            #    and if expect_change: different from the previous item read).
+            #    After 2s we stop insisting on a text change (same mods can be rolled twice).
             text = ""
-            deadline = time.time() + 3.0
+            deadline        = time.time() + 3.0
+            change_deadline = time.time() + 2.0
             while time.time() < deadline:
                 time.sleep(0.1)
                 text = self._win.read_clipboard()
                 if text and text != "AUTOCRAFT_CLEAR" and "--------" in text:
-                    break
+                    if not expect_change or text != self._last_item_text or time.time() > change_deadline:
+                        break
             else:
                 if attempt < 2:
                     self.log(f"  [debug] Clipboard vide, retry {attempt + 1}/3…")
@@ -316,6 +339,8 @@ class CraftSession:
                 preview = text[:100].replace("\n", "↵")
                 self.log(f"  [debug] Parse échoué. Clipboard: {preview}")
                 return None
+
+            self._last_item_text = text   # remember for next expect_change check
 
             if log_mods:
                 self.log(f"  [mods] {item.all_mods}")
@@ -355,7 +380,10 @@ class CraftSession:
             sessions = []
             if os.path.exists(SESSIONS_LOG):
                 with open(SESSIONS_LOG, "r", encoding="utf-8") as f:
-                    sessions = json.load(f)
+                    try:
+                        sessions = json.load(f)
+                    except json.JSONDecodeError:
+                        sessions = []
             sessions.append(entry)
             with open(SESSIONS_LOG, "w", encoding="utf-8") as f:
                 json.dump(sessions, f, indent=2, ensure_ascii=False)

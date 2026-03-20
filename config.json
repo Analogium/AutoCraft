@@ -45,10 +45,34 @@
     [
       1421,
       851
+    ],
+    [
+      1474,
+      662
+    ],
+    [
+      1470,
+      704
+    ],
+    [
+      1473,
+      749
+    ],
+    [
+      1477,
+      820
+    ],
+    [
+      1470,
+      859
+    ],
+    [
+      1517,
+      662
     ]
   ],
   "notables": [],
-  "csv_path": "/mnt/c/Users/Theo/Downloads/cluster-combinations.csv",
+  "csv_path": "/mnt/c/Users/Theo/Downloads/cluster-combinations (1).csv",
   "delay_min": 0.15,
   "delay_max": 0.45,
   "max_iterations": 5000

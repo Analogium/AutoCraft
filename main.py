@@ -228,10 +228,13 @@ class AutoCraftApp(tk.Tk):
         self._btn_start = ttk.Button(bar, text="▶  Démarrer  [F5]",
                                      command=self._start, width=20)
         self._btn_stop  = ttk.Button(bar, text="■  Arrêter",
-                                     command=self._stop, width=16, state="disabled")
+                                     command=self._stop, width=16)
+        self._btn_pause = ttk.Button(bar, text="⏸  Pause  [F7]",
+                                     command=self._toggle_pause, width=18, state="disabled")
 
         self._btn_start.pack(side="left", padx=(0, 6))
-        self._btn_stop.pack(side="left")
+        self._btn_stop.pack(side="left", padx=(0, 6))
+        self._btn_pause.pack(side="left")
 
         self._status_var = tk.StringVar(value="En attente")
         ttk.Label(bar, textvariable=self._status_var, foreground="gray").pack(
@@ -365,6 +368,7 @@ class AutoCraftApp(tk.Tk):
         self._session.start()
         self._btn_start.configure(state="disabled")
         self._btn_stop.configure(state="normal")
+        self._btn_pause.configure(state="normal", text="⏸  Pause")
         self._notebook.select(self._tab_log)
         self._window_was_unfocused = False
         self._poll_session()
@@ -374,7 +378,19 @@ class AutoCraftApp(tk.Tk):
         if self._session:
             self._session.stop()
         self._btn_start.configure(state="normal")
-        self._btn_stop.configure(state="disabled")
+        self._btn_pause.configure(state="disabled", text="⏸  Pause")
+
+    def _toggle_pause(self):
+        if not self._session:
+            return
+        if self._session.is_paused():
+            self._session.resume()
+            self._btn_pause.configure(text="⏸  Pause")
+            self._status_var.set("Running")
+        else:
+            self._session.pause()
+            self._btn_pause.configure(text="▶  Reprendre [F7]")
+            self._status_var.set("En pause")
 
     def _poll_window_focus(self):
         """Stop session when window regains focus after user switched to POE."""
@@ -393,7 +409,7 @@ class AutoCraftApp(tk.Tk):
             self.after(500, self._poll_session)
         else:
             self._btn_start.configure(state="normal")
-            self._btn_stop.configure(state="disabled")
+            self._btn_pause.configure(state="disabled", text="⏸  Pause")
 
     # ------------------------------------------------------------------
     # Config helpers
@@ -618,6 +634,8 @@ class AutoCraftApp(tk.Tk):
                         self.after(0, self._start)
                     elif key == keyboard.Key.f6:
                         self.after(0, self._stop)
+                    elif key == keyboard.Key.f7:
+                        self.after(0, self._toggle_pause)
                 except Exception:
                     pass
 
