@@ -1,0 +1,7703 @@
+{
+  "Large": {
+    "enchants": [
+      {
+        "enchant_slug": "Large_Cluster_Jewel_affliction_axe_and_sword_damage",
+        "enchant_url": "https://poedb.tw/us/Large_Cluster_Jewel_affliction_axe_and_sword_damage",
+        "enchant_text": [
+          "Axe Attacks deal  12 % increased Damage with Hits and Ailments",
+          "Sword Attacks deal  12 % increased Damage with Hits and Ailments"
+        ],
+        "notables": [
+          {
+            "name": "Vicious Skewering",
+            "weight": 141,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "physical",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Bloodscent",
+            "weight": 47,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "attack"
+            ]
+          },
+          {
+            "name": "Run Through",
+            "weight": 141,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "attack"
+            ]
+          },
+          {
+            "name": "Wound Aggravation",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "attack"
+            ]
+          },
+          {
+            "name": "Smite the Weak",
+            "weight": 750,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Heavy Hitter",
+            "weight": 375,
+            "level": 50,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Martial Prowess",
+            "weight": 750,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Calamitous",
+            "weight": 375,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "fire",
+              "cold",
+              "lightning",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Devastator",
+            "weight": 47,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "attack"
+            ]
+          },
+          {
+            "name": "Fuel the Fight",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Drive the Destruction",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Feed the Fury",
+            "weight": 375,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Aggressive Defence",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Large_Cluster_Jewel_affliction_mace_and_staff_damage",
+        "enchant_url": "https://poedb.tw/us/Large_Cluster_Jewel_affliction_mace_and_staff_damage",
+        "enchant_text": [
+          "Staff Attacks deal  12 % increased Damage with Hits and Ailments",
+          "Mace or Sceptre Attacks deal  12 % increased Damage with Hits and Ailments"
+        ],
+        "notables": [
+          {
+            "name": "Vicious Skewering",
+            "weight": 141,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "physical",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Overlord",
+            "weight": 47,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Expansive Might",
+            "weight": 141,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Weight Advantage",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack",
+              "attribute"
+            ]
+          },
+          {
+            "name": "Smite the Weak",
+            "weight": 750,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Heavy Hitter",
+            "weight": 375,
+            "level": 50,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Martial Prowess",
+            "weight": 750,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Calamitous",
+            "weight": 375,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "fire",
+              "cold",
+              "lightning",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Devastator",
+            "weight": 47,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "attack"
+            ]
+          },
+          {
+            "name": "Fuel the Fight",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Drive the Destruction",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Feed the Fury",
+            "weight": 375,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Aggressive Defence",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Large_Cluster_Jewel_affliction_dagger_and_claw_damage",
+        "enchant_url": "https://poedb.tw/us/Large_Cluster_Jewel_affliction_dagger_and_claw_damage",
+        "enchant_text": [
+          "Claw Attacks deal  12 % increased Damage with Hits and Ailments",
+          "Dagger Attacks deal  12 % increased Damage with Hits and Ailments"
+        ],
+        "notables": [
+          {
+            "name": "Vicious Skewering",
+            "weight": 151,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "physical",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Wind-up",
+            "weight": 151,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack",
+              "critical"
+            ]
+          },
+          {
+            "name": "Fan of Blades",
+            "weight": 51,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Disease Vector",
+            "weight": 404,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Smite the Weak",
+            "weight": 808,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Heavy Hitter",
+            "weight": 404,
+            "level": 50,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Martial Prowess",
+            "weight": 808,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Calamitous",
+            "weight": 404,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "fire",
+              "cold",
+              "lightning",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Devastator",
+            "weight": 51,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "attack"
+            ]
+          },
+          {
+            "name": "Fuel the Fight",
+            "weight": 808,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Drive the Destruction",
+            "weight": 808,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Feed the Fury",
+            "weight": 404,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Aggressive Defence",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Large_Cluster_Jewel_affliction_bow_damage",
+        "enchant_url": "https://poedb.tw/us/Large_Cluster_Jewel_affliction_bow_damage",
+        "enchant_text": [
+          "12 % increased Damage with Bows",
+          "12 % increased Damage Over Time with Bow Skills"
+        ],
+        "notables": [
+          {
+            "name": "Vicious Skewering",
+            "weight": 145,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "physical",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Arcing Shot",
+            "weight": 387,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack",
+              "critical"
+            ]
+          },
+          {
+            "name": "Tempered Arrowheads",
+            "weight": 387,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Broadside",
+            "weight": 774,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "attack"
+            ]
+          },
+          {
+            "name": "Smite the Weak",
+            "weight": 774,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Heavy Hitter",
+            "weight": 387,
+            "level": 50,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Martial Prowess",
+            "weight": 774,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Calamitous",
+            "weight": 387,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "fire",
+              "cold",
+              "lightning",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Devastator",
+            "weight": 48,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "attack"
+            ]
+          },
+          {
+            "name": "Fuel the Fight",
+            "weight": 774,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Drive the Destruction",
+            "weight": 774,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Feed the Fury",
+            "weight": 387,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "attack",
+              "speed"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Large_Cluster_Jewel_affliction_wand_damage",
+        "enchant_url": "https://poedb.tw/us/Large_Cluster_Jewel_affliction_wand_damage",
+        "enchant_text": [
+          "Wand Attacks deal  12 % increased Damage with Hits and Ailments"
+        ],
+        "notables": [
+          {
+            "name": "Vicious Skewering",
+            "weight": 151,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "physical",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Explosive Force",
+            "weight": 151,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "chaos",
+              "attack"
+            ]
+          },
+          {
+            "name": "Opportunistic Fusilade",
+            "weight": 807,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack",
+              "critical"
+            ]
+          },
+          {
+            "name": "Storm's Hand",
+            "weight": 403,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "elemental",
+              "lightning",
+              "attack"
+            ]
+          },
+          {
+            "name": "Smite the Weak",
+            "weight": 807,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Heavy Hitter",
+            "weight": 403,
+            "level": 50,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Martial Prowess",
+            "weight": 807,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Calamitous",
+            "weight": 403,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "fire",
+              "cold",
+              "lightning",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Devastator",
+            "weight": 50,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "attack"
+            ]
+          },
+          {
+            "name": "Fuel the Fight",
+            "weight": 807,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Drive the Destruction",
+            "weight": 807,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Feed the Fury",
+            "weight": 403,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "attack",
+              "speed"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Large_Cluster_Jewel_affliction_damage_with_two_handed_melee_weapons",
+        "enchant_url": "https://poedb.tw/us/Large_Cluster_Jewel_affliction_damage_with_two_handed_melee_weapons",
+        "enchant_text": [
+          "12 % increased Damage with Two Handed Weapons"
+        ],
+        "notables": [
+          {
+            "name": "Vicious Skewering",
+            "weight": 113,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "physical",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Titanic Swings",
+            "weight": 302,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Battlefield Dominator",
+            "weight": 604,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Martial Mastery",
+            "weight": 302,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "attack",
+              "speed",
+              "attribute"
+            ]
+          },
+          {
+            "name": "Surefooted Striker",
+            "weight": 302,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack",
+              "critical"
+            ]
+          },
+          {
+            "name": "Graceful Execution",
+            "weight": 604,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "attack",
+              "speed",
+              "critical",
+              "attribute"
+            ]
+          },
+          {
+            "name": "Brutal Infamy",
+            "weight": 302,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Fearsome Warrior",
+            "weight": 113,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Smite the Weak",
+            "weight": 604,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Heavy Hitter",
+            "weight": 302,
+            "level": 50,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Martial Prowess",
+            "weight": 604,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Calamitous",
+            "weight": 302,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "fire",
+              "cold",
+              "lightning",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Devastator",
+            "weight": 38,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "attack"
+            ]
+          },
+          {
+            "name": "Fuel the Fight",
+            "weight": 604,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Drive the Destruction",
+            "weight": 604,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Feed the Fury",
+            "weight": 302,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "attack",
+              "speed"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Large_Cluster_Jewel_affliction_attack_damage_while_dual_wielding_",
+        "enchant_url": "https://poedb.tw/us/Large_Cluster_Jewel_affliction_attack_damage_while_dual_wielding_",
+        "enchant_text": [
+          "12 % increased Attack Damage while Dual Wielding"
+        ],
+        "notables": [
+          {
+            "name": "Vicious Skewering",
+            "weight": 117,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "physical",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Combat Rhythm",
+            "weight": 312,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Hit and Run",
+            "weight": 623,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Insatiable Killer",
+            "weight": 312,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Mage Bane",
+            "weight": 117,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Martial Momentum",
+            "weight": 312,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Deadly Repartee",
+            "weight": 623,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack",
+              "critical"
+            ]
+          },
+          {
+            "name": "Quick and Deadly",
+            "weight": 117,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Smite the Weak",
+            "weight": 623,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Heavy Hitter",
+            "weight": 312,
+            "level": 50,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Martial Prowess",
+            "weight": 623,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Calamitous",
+            "weight": 312,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "fire",
+              "cold",
+              "lightning",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Devastator",
+            "weight": 39,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "attack"
+            ]
+          },
+          {
+            "name": "Fuel the Fight",
+            "weight": 623,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Drive the Destruction",
+            "weight": 623,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Feed the Fury",
+            "weight": 312,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "attack",
+              "speed"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Large_Cluster_Jewel_affliction_attack_damage_while_holding_a_shield",
+        "enchant_url": "https://poedb.tw/us/Large_Cluster_Jewel_affliction_attack_damage_while_holding_a_shield",
+        "enchant_text": [
+          "12 % increased Attack Damage while holding a Shield"
+        ],
+        "notables": [
+          {
+            "name": "Prodigious Defence",
+            "weight": 600,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Advance Guard",
+            "weight": 300,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Strike Leader",
+            "weight": 600,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Gladiator's Fortitude",
+            "weight": 113,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Precise Retaliation",
+            "weight": 300,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "critical"
+            ]
+          },
+          {
+            "name": "Veteran Defender",
+            "weight": 600,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "elemental",
+              "resistance",
+              "attribute"
+            ]
+          },
+          {
+            "name": "Vicious Skewering",
+            "weight": 113,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "physical",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Smite the Weak",
+            "weight": 600,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Heavy Hitter",
+            "weight": 300,
+            "level": 50,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Martial Prowess",
+            "weight": 600,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Calamitous",
+            "weight": 300,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "fire",
+              "cold",
+              "lightning",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Devastator",
+            "weight": 38,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "attack"
+            ]
+          },
+          {
+            "name": "Fuel the Fight",
+            "weight": 600,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Drive the Destruction",
+            "weight": 600,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Feed the Fury",
+            "weight": 300,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Riot Queller",
+            "weight": 38,
+            "level": 75,
+            "type": "Prefix",
+            "tags": []
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Large_Cluster_Jewel_affliction_attack_damage_",
+        "enchant_url": "https://poedb.tw/us/Large_Cluster_Jewel_affliction_attack_damage_",
+        "enchant_text": [
+          "10 % increased Attack Damage"
+        ],
+        "notables": [
+          {
+            "name": "Vicious Skewering",
+            "weight": 81,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "physical",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Smite the Weak",
+            "weight": 432,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Heavy Hitter",
+            "weight": 216,
+            "level": 50,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Martial Prowess",
+            "weight": 432,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Calamitous",
+            "weight": 216,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "fire",
+              "cold",
+              "lightning",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Devastator",
+            "weight": 27,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "attack"
+            ]
+          },
+          {
+            "name": "Fuel the Fight",
+            "weight": 432,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "attack",
+              "speed"
+            ]
+          },
+          {
+            "name": "Drive the Destruction",
+            "weight": 432,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Feed the Fury",
+            "weight": 216,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "attack",
+              "speed"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Large_Cluster_Jewel_affliction_spell_damage",
+        "enchant_url": "https://poedb.tw/us/Large_Cluster_Jewel_affliction_spell_damage",
+        "enchant_text": [
+          "10 % increased Spell Damage"
+        ],
+        "notables": [
+          {
+            "name": "Ancestral Inspiration",
+            "weight": 281,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "caster"
+            ]
+          },
+          {
+            "name": "Arcane Adept",
+            "weight": 281,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack",
+              "caster",
+              "speed"
+            ]
+          },
+          {
+            "name": "Seal Mender",
+            "weight": 94,
+            "level": 75,
+            "type": "Prefix",
+            "tags": []
+          },
+          {
+            "name": "Conjured Wall",
+            "weight": 750,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "caster"
+            ]
+          },
+          {
+            "name": "Arcane Heroism",
+            "weight": 281,
+            "level": 68,
+            "type": "Prefix",
+            "tags": []
+          },
+          {
+            "name": "Practiced Caster",
+            "weight": 1500,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "caster",
+              "speed"
+            ]
+          },
+          {
+            "name": "Burden Projection",
+            "weight": 750,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "caster",
+              "speed"
+            ]
+          },
+          {
+            "name": "Thaumophage",
+            "weight": 750,
+            "level": 50,
+            "type": "Suffix",
+            "tags": [
+              "defences",
+              "energy_shield",
+              "damage",
+              "caster"
+            ]
+          },
+          {
+            "name": "Essence Rush",
+            "weight": 750,
+            "level": 50,
+            "type": "Suffix",
+            "tags": [
+              "defences",
+              "energy_shield",
+              "damage",
+              "attack",
+              "caster",
+              "speed"
+            ]
+          },
+          {
+            "name": "Sap Psyche",
+            "weight": 281,
+            "level": 68,
+            "type": "Suffix",
+            "tags": [
+              "mana",
+              "defences",
+              "energy_shield",
+              "damage",
+              "caster"
+            ]
+          },
+          {
+            "name": "Mage Hunter",
+            "weight": 281,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "caster"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Large_Cluster_Jewel_affliction_elemental_damage",
+        "enchant_url": "https://poedb.tw/us/Large_Cluster_Jewel_affliction_elemental_damage",
+        "enchant_text": [
+          "10 % increased Elemental Damage"
+        ],
+        "notables": [
+          {
+            "name": "Sadist",
+            "weight": 281,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental"
+            ]
+          },
+          {
+            "name": "Corrosive Elements",
+            "weight": 94,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental"
+            ]
+          },
+          {
+            "name": "Doryani's Lesson",
+            "weight": 281,
+            "level": 68,
+            "type": "Suffix",
+            "tags": [
+              "life",
+              "damage",
+              "elemental"
+            ]
+          },
+          {
+            "name": "Disorienting Display",
+            "weight": 750,
+            "level": 50,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "elemental"
+            ]
+          },
+          {
+            "name": "Prismatic Heart",
+            "weight": 1500,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Widespread Destruction",
+            "weight": 1500,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "elemental"
+            ]
+          },
+          {
+            "name": "Inspired Oppression",
+            "weight": 94,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "damage",
+              "elemental",
+              "ailment"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Large_Cluster_Jewel_affliction_physical_damage",
+        "enchant_url": "https://poedb.tw/us/Large_Cluster_Jewel_affliction_physical_damage",
+        "enchant_text": [
+          "12 % increased Physical Damage"
+        ],
+        "notables": [
+          {
+            "name": "Iron Breaker",
+            "weight": 464,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical"
+            ]
+          },
+          {
+            "name": "Master the Fundamentals",
+            "weight": 232,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "elemental",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Force Multiplier",
+            "weight": 232,
+            "level": 50,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "physical"
+            ]
+          },
+          {
+            "name": "Furious Assault",
+            "weight": 464,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "damage",
+              "physical",
+              "attack",
+              "caster"
+            ]
+          },
+          {
+            "name": "Grim Oath",
+            "weight": 87,
+            "level": 68,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "physical",
+              "chaos"
+            ]
+          },
+          {
+            "name": "Battle-Hardened",
+            "weight": 232,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "armour",
+              "evasion",
+              "physical"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Large_Cluster_Jewel_affliction_fire_damage",
+        "enchant_url": "https://poedb.tw/us/Large_Cluster_Jewel_affliction_fire_damage",
+        "enchant_text": [
+          "12 % increased Fire Damage"
+        ],
+        "notables": [
+          {
+            "name": "Sadist",
+            "weight": 89,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental"
+            ]
+          },
+          {
+            "name": "Corrosive Elements",
+            "weight": 30,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental"
+            ]
+          },
+          {
+            "name": "Doryani's Lesson",
+            "weight": 89,
+            "level": 68,
+            "type": "Suffix",
+            "tags": [
+              "life",
+              "damage",
+              "elemental"
+            ]
+          },
+          {
+            "name": "Disorienting Display",
+            "weight": 238,
+            "level": 50,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "elemental"
+            ]
+          },
+          {
+            "name": "Prismatic Heart",
+            "weight": 475,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Widespread Destruction",
+            "weight": 475,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "elemental"
+            ]
+          },
+          {
+            "name": "Master of Fire",
+            "weight": 30,
+            "level": 75,
+            "type": "Prefix",
+            "tags": []
+          },
+          {
+            "name": "Smoking Remains",
+            "weight": 238,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "fire"
+            ]
+          },
+          {
+            "name": "Cremator",
+            "weight": 238,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "fire"
+            ]
+          },
+          {
+            "name": "Burning Bright",
+            "weight": 238,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "fire"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Large_Cluster_Jewel_affliction_lightning_damage",
+        "enchant_url": "https://poedb.tw/us/Large_Cluster_Jewel_affliction_lightning_damage",
+        "enchant_text": [
+          "12 % increased Lightning Damage"
+        ],
+        "notables": [
+          {
+            "name": "Sadist",
+            "weight": 136,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental"
+            ]
+          },
+          {
+            "name": "Corrosive Elements",
+            "weight": 45,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental"
+            ]
+          },
+          {
+            "name": "Doryani's Lesson",
+            "weight": 136,
+            "level": 68,
+            "type": "Suffix",
+            "tags": [
+              "life",
+              "damage",
+              "elemental"
+            ]
+          },
+          {
+            "name": "Disorienting Display",
+            "weight": 364,
+            "level": 50,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "elemental"
+            ]
+          },
+          {
+            "name": "Prismatic Heart",
+            "weight": 727,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Widespread Destruction",
+            "weight": 727,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "elemental"
+            ]
+          },
+          {
+            "name": "Snowstorm",
+            "weight": 364,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "cold",
+              "lightning"
+            ]
+          },
+          {
+            "name": "Storm Drinker",
+            "weight": 727,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "energy_shield",
+              "damage",
+              "elemental",
+              "lightning"
+            ]
+          },
+          {
+            "name": "Paralysis",
+            "weight": 364,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "lightning"
+            ]
+          },
+          {
+            "name": "Inspired Oppression",
+            "weight": 45,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "damage",
+              "elemental",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Thunderstruck",
+            "weight": 364,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "lightning",
+              "critical"
+            ]
+          },
+          {
+            "name": "Stormrider",
+            "weight": 136,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "cold",
+              "lightning"
+            ]
+          },
+          {
+            "name": "Overshock",
+            "weight": 364,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "lightning",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Scintillating Idea",
+            "weight": 364,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "damage",
+              "elemental",
+              "lightning"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Large_Cluster_Jewel_affliction_cold_damage",
+        "enchant_url": "https://poedb.tw/us/Large_Cluster_Jewel_affliction_cold_damage",
+        "enchant_text": [
+          "12 % increased Cold Damage"
+        ],
+        "notables": [
+          {
+            "name": "Sadist",
+            "weight": 95,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental"
+            ]
+          },
+          {
+            "name": "Corrosive Elements",
+            "weight": 32,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental"
+            ]
+          },
+          {
+            "name": "Doryani's Lesson",
+            "weight": 95,
+            "level": 68,
+            "type": "Suffix",
+            "tags": [
+              "life",
+              "damage",
+              "elemental"
+            ]
+          },
+          {
+            "name": "Disorienting Display",
+            "weight": 253,
+            "level": 50,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "elemental"
+            ]
+          },
+          {
+            "name": "Prismatic Heart",
+            "weight": 505,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Widespread Destruction",
+            "weight": 505,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "elemental"
+            ]
+          },
+          {
+            "name": "Snowstorm",
+            "weight": 253,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "cold",
+              "lightning"
+            ]
+          },
+          {
+            "name": "Blanketed Snow",
+            "weight": 95,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "cold"
+            ]
+          },
+          {
+            "name": "Cold to the Core",
+            "weight": 95,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "cold"
+            ]
+          },
+          {
+            "name": "Cold-Blooded Killer",
+            "weight": 253,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "elemental",
+              "cold"
+            ]
+          },
+          {
+            "name": "Inspired Oppression",
+            "weight": 32,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "damage",
+              "elemental",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Deep Chill",
+            "weight": 505,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "cold",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Blast-Freeze",
+            "weight": 95,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "cold",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Stormrider",
+            "weight": 95,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "cold",
+              "lightning"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Large_Cluster_Jewel_affliction_chaos_damage",
+        "enchant_url": "https://poedb.tw/us/Large_Cluster_Jewel_affliction_chaos_damage",
+        "enchant_text": [
+          "12 % increased Chaos Damage"
+        ],
+        "notables": [
+          {
+            "name": "Grim Oath",
+            "weight": 97,
+            "level": 68,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "physical",
+              "chaos"
+            ]
+          },
+          {
+            "name": "Overwhelming Malice",
+            "weight": 97,
+            "level": 68,
+            "type": "Prefix",
+            "tags": []
+          },
+          {
+            "name": "Touch of Cruelty",
+            "weight": 519,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos"
+            ]
+          },
+          {
+            "name": "Unwaveringly Evil",
+            "weight": 519,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos"
+            ]
+          },
+          {
+            "name": "Unspeakable Gifts",
+            "weight": 32,
+            "level": 75,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "chaos"
+            ]
+          },
+          {
+            "name": "Dark Ideation",
+            "weight": 97,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos"
+            ]
+          },
+          {
+            "name": "Unholy Grace",
+            "weight": 519,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "chaos",
+              "attack",
+              "caster",
+              "speed"
+            ]
+          },
+          {
+            "name": "Wicked Pall",
+            "weight": 259,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Large_Cluster_Jewel_affliction_minion_damage",
+        "enchant_url": "https://poedb.tw/us/Large_Cluster_Jewel_affliction_minion_damage",
+        "enchant_text": [
+          "Minions deal  10 % increased Damage"
+        ],
+        "notables": [
+          {
+            "name": "Renewal",
+            "weight": 500,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "minion"
+            ]
+          },
+          {
+            "name": "Raze and Pillage",
+            "weight": 188,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "elemental",
+              "fire",
+              "minion",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Rotten Claws",
+            "weight": 500,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "physical",
+              "attack",
+              "minion"
+            ]
+          },
+          {
+            "name": "Call to the Slaughter",
+            "weight": 1000,
+            "level": 1,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "attack",
+              "caster",
+              "speed",
+              "minion"
+            ]
+          },
+          {
+            "name": "Vicious Bite",
+            "weight": 63,
+            "level": 75,
+            "type": "Suffix",
+            "tags": [
+              "damage",
+              "minion",
+              "critical"
+            ]
+          },
+          {
+            "name": "Primordial Bond",
+            "weight": 188,
+            "level": 68,
+            "type": "Suffix",
+            "tags": [
+              "life",
+              "damage",
+              "minion"
+            ]
+          },
+          {
+            "name": "Feasting Fiends",
+            "weight": 1000,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "minion"
+            ]
+          },
+          {
+            "name": "Skeletal Atrophy",
+            "weight": 188,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "chaos",
+              "minion"
+            ]
+          }
+        ]
+      }
+    ],
+    "prefixes": [
+      {
+        "name": "Hale",
+        "text": "Added Small Passive Skills also grant: +(2—3) to Maximum Life",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Healthy",
+        "text": "Added Small Passive Skills also grant: +(4—7) to Maximum Life",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "Sanguine",
+        "text": "Added Small Passive Skills also grant: +(8—10) to Maximum Life",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "Beryl",
+        "text": "Added Small Passive Skills also grant: +(2—5) to Maximum Mana",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Cobalt",
+        "text": "Added Small Passive Skills also grant: +(6—8) to Maximum Mana",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "Azure",
+        "text": "Added Small Passive Skills also grant: +(9—10) to Maximum Mana",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "Shining",
+        "text": "Added Small Passive Skills also grant: +(4—5) to Maximum Energy Shield",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Glimmering",
+        "text": "Added Small Passive Skills also grant: +(6—9) to Maximum Energy Shield",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "Glowing",
+        "text": "Added Small Passive Skills also grant: +(10—12) to Maximum Energy Shield",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "Lacquered",
+        "text": "Added Small Passive Skills also grant: +(11—20) to Armour",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Studded",
+        "text": "Added Small Passive Skills also grant: +(21—30) to Armour",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "Ribbed",
+        "text": "Added Small Passive Skills also grant: +(31—40) to Armour",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "Agile",
+        "text": "Added Small Passive Skills also grant: +(11—20) to Evasion",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Dancer's",
+        "text": "Added Small Passive Skills also grant: +(21—30) to Evasion",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "Acrobat's",
+        "text": "Added Small Passive Skills also grant: +(31—40) to Evasion",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "Harmful",
+        "text": "Added Small Passive Skills also grant: 2% increased Damage",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Hazardous",
+        "text": "Added Small Passive Skills also grant: 3% increased Damage",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "Dangerous",
+        "text": "Added Small Passive Skills also grant: 4% increased Damage",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "Potent",
+        "text": "Added Small Passive Skills have 25% increased Effect",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Powerful",
+        "text": "Added Small Passive Skills have 35% increased Effect",
+        "level": 84,
+        "weight": 300
+      }
+    ],
+    "suffixes": [
+      {
+        "name": "of the Brute",
+        "text": "Added Small Passive Skills also grant: +(2—3) to Strength",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Wrestler",
+        "text": "Added Small Passive Skills also grant: +(4—5) to Strength",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Bear",
+        "text": "Added Small Passive Skills also grant: +(6—8) to Strength",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "of the Mongoose",
+        "text": "Added Small Passive Skills also grant: +(2—3) to Dexterity",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Lynx",
+        "text": "Added Small Passive Skills also grant: +(4—5) to Dexterity",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Fox",
+        "text": "Added Small Passive Skills also grant: +(6—8) to Dexterity",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "of the Pupil",
+        "text": "Added Small Passive Skills also grant: +(2—3) to Intelligence",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Student",
+        "text": "Added Small Passive Skills also grant: +(4—5) to Intelligence",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Prodigy",
+        "text": "Added Small Passive Skills also grant: +(6—8) to Intelligence",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "of the Cloud",
+        "text": "Added Small Passive Skills also grant: +2 to All Attributes",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Sky",
+        "text": "Added Small Passive Skills also grant: +3 to All Attributes",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Meteor",
+        "text": "Added Small Passive Skills also grant: +4 to All Attributes",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "of Excitement",
+        "text": "Added Small Passive Skills also grant: 4% increased Mana Regeneration Rate",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of Joy",
+        "text": "Added Small Passive Skills also grant: 5% increased Mana Regeneration Rate",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of Elation",
+        "text": "Added Small Passive Skills also grant: 6% increased Mana Regeneration Rate",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "of the Newt",
+        "text": "Added Small Passive Skills also grant: Regenerate 0.1% of Life per Second",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Lizard",
+        "text": "Added Small Passive Skills also grant: Regenerate 0.15% of Life per Second",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Flatworm",
+        "text": "Added Small Passive Skills also grant: Regenerate 0.2% of Life per Second",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "of the Whelpling",
+        "text": "Added Small Passive Skills also grant: +(2—3)% to Fire Resistance",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Salamander",
+        "text": "Added Small Passive Skills also grant: +(4—5)% to Fire Resistance",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Drake",
+        "text": "Added Small Passive Skills also grant: +(6—7)% to Fire Resistance",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "of the Inuit",
+        "text": "Added Small Passive Skills also grant: +(2—3)% to Cold Resistance",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Seal",
+        "text": "Added Small Passive Skills also grant: +(4—5)% to Cold Resistance",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Penguin",
+        "text": "Added Small Passive Skills also grant: +(6—7)% to Cold Resistance",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "of the Cloud",
+        "text": "Added Small Passive Skills also grant: +(2—3)% to Lightning Resistance",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Squall",
+        "text": "Added Small Passive Skills also grant: +(4—5)% to Lightning Resistance",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Storm",
+        "text": "Added Small Passive Skills also grant: +(6—7)% to Lightning Resistance",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "of the Crystal",
+        "text": "Added Small Passive Skills also grant: +2% to all Elemental Resistances",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Prism",
+        "text": "Added Small Passive Skills also grant: +3% to all Elemental Resistances",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Kaleidoscope",
+        "text": "Added Small Passive Skills also grant: +4% to all Elemental Resistances",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "of the Lost",
+        "text": "Added Small Passive Skills also grant: +3% to Chaos Resistance",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of Banishment",
+        "text": "Added Small Passive Skills also grant: +4% to Chaos Resistance",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of Eviction",
+        "text": "Added Small Passive Skills also grant: +5% to Chaos Resistance",
+        "level": 84,
+        "weight": 300
+      }
+    ]
+  },
+  "Medium": {
+    "enchants": [
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_affliction_fire_damage_over_time_multiplier",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_affliction_fire_damage_over_time_multiplier",
+        "enchant_text": [
+          "12 % increased Burning Damage"
+        ],
+        "notables": [
+          {
+            "name": "Eye of the Storm",
+            "weight": 366,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "fire",
+              "cold",
+              "lightning",
+              "critical",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Master of Fire",
+            "weight": 46,
+            "level": 75,
+            "type": "Prefix",
+            "tags": []
+          },
+          {
+            "name": "Smoking Remains",
+            "weight": 366,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "fire"
+            ]
+          },
+          {
+            "name": "Cremator",
+            "weight": 366,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "fire"
+            ]
+          },
+          {
+            "name": "Blowback",
+            "weight": 366,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "fire",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Fan the Flames",
+            "weight": 137,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "fire",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Cooked Alive",
+            "weight": 137,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "fire",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Burning Bright",
+            "weight": 366,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "fire"
+            ]
+          },
+          {
+            "name": "Wrapped in Flame",
+            "weight": 137,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "fire"
+            ]
+          },
+          {
+            "name": "Wasting Affliction",
+            "weight": 137,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Haemorrhage",
+            "weight": 366,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "critical",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Flow of Life",
+            "weight": 137,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage"
+            ]
+          },
+          {
+            "name": "Exposure Therapy",
+            "weight": 733,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Brush with Death",
+            "weight": 137,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "defences",
+              "energy_shield",
+              "damage"
+            ]
+          },
+          {
+            "name": "Vile Reinvigoration",
+            "weight": 366,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "energy_shield",
+              "damage"
+            ]
+          },
+          {
+            "name": "Circling Oblivion",
+            "weight": 733,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Brewed for Potency",
+            "weight": 733,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "mana",
+              "damage"
+            ]
+          },
+          {
+            "name": "Student of Decay",
+            "weight": 366,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos",
+              "resistance"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_affliction_chaos_damage_over_time_multiplier",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_affliction_chaos_damage_over_time_multiplier",
+        "enchant_text": [
+          "12 % increased Chaos Damage over Time"
+        ],
+        "notables": [
+          {
+            "name": "Unwaveringly Evil",
+            "weight": 696,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos"
+            ]
+          },
+          {
+            "name": "Dark Ideation",
+            "weight": 130,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos"
+            ]
+          },
+          {
+            "name": "Wicked Pall",
+            "weight": 348,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos"
+            ]
+          },
+          {
+            "name": "Septic Spells",
+            "weight": 348,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos",
+              "caster",
+              "speed",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Low Tolerance",
+            "weight": 130,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Steady Torment",
+            "weight": 130,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "chaos",
+              "attack",
+              "ailment",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Eternal Suffering",
+            "weight": 348,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos"
+            ]
+          },
+          {
+            "name": "Eldritch Inspiration",
+            "weight": 348,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "damage",
+              "chaos"
+            ]
+          },
+          {
+            "name": "Wasting Affliction",
+            "weight": 130,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Haemorrhage",
+            "weight": 348,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "critical",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Flow of Life",
+            "weight": 130,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage"
+            ]
+          },
+          {
+            "name": "Exposure Therapy",
+            "weight": 696,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Brush with Death",
+            "weight": 130,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "defences",
+              "energy_shield",
+              "damage"
+            ]
+          },
+          {
+            "name": "Vile Reinvigoration",
+            "weight": 348,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "energy_shield",
+              "damage"
+            ]
+          },
+          {
+            "name": "Circling Oblivion",
+            "weight": 696,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Brewed for Potency",
+            "weight": 696,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "mana",
+              "damage"
+            ]
+          },
+          {
+            "name": "Student of Decay",
+            "weight": 348,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos",
+              "resistance"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_affliction_physical_damage_over_time_multiplier",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_affliction_physical_damage_over_time_multiplier",
+        "enchant_text": [
+          "12 % increased Physical Damage over Time"
+        ],
+        "notables": [
+          {
+            "name": "Wound Aggravation",
+            "weight": 686,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "attack"
+            ]
+          },
+          {
+            "name": "Vivid Hues",
+            "weight": 343,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "physical",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Rend",
+            "weight": 343,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "physical",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Disorienting Wounds",
+            "weight": 686,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "physical",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Compound Injury",
+            "weight": 343,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "physical",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Steady Torment",
+            "weight": 129,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "chaos",
+              "attack",
+              "ailment",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Wasting Affliction",
+            "weight": 129,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Haemorrhage",
+            "weight": 343,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "critical",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Flow of Life",
+            "weight": 129,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage"
+            ]
+          },
+          {
+            "name": "Exposure Therapy",
+            "weight": 686,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Brush with Death",
+            "weight": 129,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "defences",
+              "energy_shield",
+              "damage"
+            ]
+          },
+          {
+            "name": "Vile Reinvigoration",
+            "weight": 343,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "energy_shield",
+              "damage"
+            ]
+          },
+          {
+            "name": "Circling Oblivion",
+            "weight": 686,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Brewed for Potency",
+            "weight": 686,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "mana",
+              "damage"
+            ]
+          },
+          {
+            "name": "Student of Decay",
+            "weight": 343,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Blood Artist",
+            "weight": 129,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "physical",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Phlebotomist",
+            "weight": 343,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "physical",
+              "critical",
+              "ailment"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_affliction_cold_damage_over_time_multiplier",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_affliction_cold_damage_over_time_multiplier",
+        "enchant_text": [
+          "12 % increased Cold Damage over Time"
+        ],
+        "notables": [
+          {
+            "name": "Cold-Blooded Killer",
+            "weight": 390,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "elemental",
+              "cold"
+            ]
+          },
+          {
+            "name": "Wasting Affliction",
+            "weight": 178,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Haemorrhage",
+            "weight": 475,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "critical",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Flow of Life",
+            "weight": 178,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage"
+            ]
+          },
+          {
+            "name": "Exposure Therapy",
+            "weight": 950,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Brush with Death",
+            "weight": 178,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "defences",
+              "energy_shield",
+              "damage"
+            ]
+          },
+          {
+            "name": "Vile Reinvigoration",
+            "weight": 475,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "energy_shield",
+              "damage"
+            ]
+          },
+          {
+            "name": "Circling Oblivion",
+            "weight": 950,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Brewed for Potency",
+            "weight": 950,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "mana",
+              "damage"
+            ]
+          },
+          {
+            "name": "Chilling Presence",
+            "weight": 59,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "cold",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Deep Chill",
+            "weight": 950,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "cold",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Blast-Freeze",
+            "weight": 178,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "cold",
+              "ailment"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_affliction_damage_over_time_multiplier",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_affliction_damage_over_time_multiplier",
+        "enchant_text": [
+          "10 % increased Damage over Time"
+        ],
+        "notables": [
+          {
+            "name": "Wasting Affliction",
+            "weight": 222,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Haemorrhage",
+            "weight": 593,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "critical",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Flow of Life",
+            "weight": 222,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage"
+            ]
+          },
+          {
+            "name": "Exposure Therapy",
+            "weight": 1185,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Brush with Death",
+            "weight": 222,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "defences",
+              "energy_shield",
+              "damage"
+            ]
+          },
+          {
+            "name": "Vile Reinvigoration",
+            "weight": 593,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "energy_shield",
+              "damage"
+            ]
+          },
+          {
+            "name": "Circling Oblivion",
+            "weight": 1185,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Brewed for Potency",
+            "weight": 1185,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "mana",
+              "damage"
+            ]
+          },
+          {
+            "name": "Student of Decay",
+            "weight": 593,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos",
+              "resistance"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_affliction_effect_of_non-damaging_ailments",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_affliction_effect_of_non-damaging_ailments",
+        "enchant_text": [
+          "10 % increased Effect of Non-Damaging Ailments"
+        ],
+        "notables": [
+          {
+            "name": "Eye of the Storm",
+            "weight": 814,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "fire",
+              "cold",
+              "lightning",
+              "critical",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Astonishing Affliction",
+            "weight": 1627,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Cold Conduction",
+            "weight": 305,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "cold",
+              "lightning",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Inspired Oppression",
+            "weight": 102,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "damage",
+              "elemental",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Chilling Presence",
+            "weight": 102,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "cold",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Deep Chill",
+            "weight": 1627,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "cold",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Blast-Freeze",
+            "weight": 305,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "cold",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Stormrider",
+            "weight": 305,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "cold",
+              "lightning"
+            ]
+          },
+          {
+            "name": "Overshock",
+            "weight": 814,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "lightning",
+              "ailment"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_old_do_not_use_affliction_aura_effect",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_old_do_not_use_affliction_aura_effect",
+        "enchant_text": [
+          "3 % increased effect of Non-Curse Auras from your Skills"
+        ],
+        "notables": [
+          {
+            "name": "Replenishing Presence",
+            "weight": 480,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "aura"
+            ]
+          },
+          {
+            "name": "Master of Command",
+            "weight": 180,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "aura"
+            ]
+          },
+          {
+            "name": "Spiteful Presence",
+            "weight": 960,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "elemental",
+              "cold",
+              "aura",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Purposeful Harbinger",
+            "weight": 60,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "aura"
+            ]
+          },
+          {
+            "name": "Destructive Aspect",
+            "weight": 180,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "aura"
+            ]
+          },
+          {
+            "name": "Electric Presence",
+            "weight": 180,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "elemental",
+              "lightning",
+              "aura",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Volatile Presence",
+            "weight": 480,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "elemental",
+              "fire",
+              "aura",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Righteous Path",
+            "weight": 960,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "aura"
+            ]
+          },
+          {
+            "name": "Pure Might",
+            "weight": 180,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "attribute"
+            ]
+          },
+          {
+            "name": "Pure Guile",
+            "weight": 180,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "attribute"
+            ]
+          },
+          {
+            "name": "Pure Aptitude",
+            "weight": 180,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "defences",
+              "energy_shield",
+              "attribute"
+            ]
+          },
+          {
+            "name": "Self-Control",
+            "weight": 480,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "mana"
+            ]
+          },
+          {
+            "name": "Uncompromising",
+            "weight": 480,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "mana"
+            ]
+          },
+          {
+            "name": "Sublime Form",
+            "weight": 480,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "elemental",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Mortifying Aspect",
+            "weight": 180,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "chaos",
+              "resistance",
+              "aura"
+            ]
+          },
+          {
+            "name": "Frantic Aspect",
+            "weight": 180,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "speed",
+              "aura"
+            ]
+          },
+          {
+            "name": "Introspection",
+            "weight": 180,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "aura"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_old_do_not_use_affliction_curse_effect",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_old_do_not_use_affliction_curse_effect",
+        "enchant_text": [
+          "2 % increased Effect of your Curses"
+        ],
+        "notables": [
+          {
+            "name": "Evil Eye",
+            "weight": 706,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "caster",
+              "curse"
+            ]
+          },
+          {
+            "name": "Doedre's Spite",
+            "weight": 353,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "caster",
+              "curse"
+            ]
+          },
+          {
+            "name": "Victim Maker",
+            "weight": 353,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "caster",
+              "speed",
+              "curse"
+            ]
+          },
+          {
+            "name": "Lord of Drought",
+            "weight": 353,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "caster",
+              "curse"
+            ]
+          },
+          {
+            "name": "Blizzard Caller",
+            "weight": 353,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "caster",
+              "critical",
+              "curse"
+            ]
+          },
+          {
+            "name": "Tempt the Storm",
+            "weight": 353,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "caster",
+              "speed",
+              "curse"
+            ]
+          },
+          {
+            "name": "Misery Everlasting",
+            "weight": 353,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "caster",
+              "curse"
+            ]
+          },
+          {
+            "name": "Exploit Weakness",
+            "weight": 353,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "caster",
+              "curse"
+            ]
+          },
+          {
+            "name": "Hound's Mark",
+            "weight": 706,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "caster",
+              "curse"
+            ]
+          },
+          {
+            "name": "Doedre's Gluttony",
+            "weight": 353,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "caster",
+              "curse"
+            ]
+          },
+          {
+            "name": "Doedre's Apathy",
+            "weight": 132,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "caster",
+              "curse"
+            ]
+          },
+          {
+            "name": "Master of the Maelstrom",
+            "weight": 353,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "caster",
+              "ailment",
+              "curse"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_affliction_damage_while_you_have_a_herald",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_affliction_damage_while_you_have_a_herald",
+        "enchant_text": [
+          "10 % increased Damage while affected by a Herald"
+        ],
+        "notables": [
+          {
+            "name": "Purposeful Harbinger",
+            "weight": 118,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "aura"
+            ]
+          },
+          {
+            "name": "Heraldry",
+            "weight": 118,
+            "level": 75,
+            "type": "Prefix",
+            "tags": []
+          },
+          {
+            "name": "Endbringer",
+            "weight": 353,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage"
+            ]
+          },
+          {
+            "name": "Empowered Envoy",
+            "weight": 1882,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage"
+            ]
+          },
+          {
+            "name": "Dark Messenger",
+            "weight": 941,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage"
+            ]
+          },
+          {
+            "name": "Agent of Destruction",
+            "weight": 1882,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "fire",
+              "cold",
+              "lightning",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Lasting Impression",
+            "weight": 353,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage"
+            ]
+          },
+          {
+            "name": "Self-Fulfilling Prophecy",
+            "weight": 353,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "critical"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_affliction_minion_damage_while_you_have_a_herald",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_affliction_minion_damage_while_you_have_a_herald",
+        "enchant_text": [
+          "Minions deal  10 % increased Damage while you are affected by a Herald"
+        ],
+        "notables": [
+          {
+            "name": "Purposeful Harbinger",
+            "weight": 158,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "aura"
+            ]
+          },
+          {
+            "name": "Heraldry",
+            "weight": 158,
+            "level": 75,
+            "type": "Prefix",
+            "tags": []
+          },
+          {
+            "name": "Endbringer",
+            "weight": 474,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage"
+            ]
+          },
+          {
+            "name": "Cult-Leader",
+            "weight": 2526,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "minion"
+            ]
+          },
+          {
+            "name": "Lasting Impression",
+            "weight": 474,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage"
+            ]
+          },
+          {
+            "name": "Invigorating Portents",
+            "weight": 1263,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "speed",
+              "minion"
+            ]
+          },
+          {
+            "name": "Pure Agony",
+            "weight": 474,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "minion"
+            ]
+          },
+          {
+            "name": "Disciples",
+            "weight": 474,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "speed",
+              "minion"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_affliction_warcry_buff_effect",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_affliction_warcry_buff_effect",
+        "enchant_text": [
+          "Exerted Attacks deal  20 % increased Damage"
+        ],
+        "notables": [
+          {
+            "name": "Mob Mentality",
+            "weight": 109,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Cry Wolf",
+            "weight": 327,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Haunting Shout",
+            "weight": 873,
+            "level": 50,
+            "type": "Prefix",
+            "tags": []
+          },
+          {
+            "name": "Lead By Example",
+            "weight": 1745,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "attribute"
+            ]
+          },
+          {
+            "name": "Provocateur",
+            "weight": 873,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "critical"
+            ]
+          },
+          {
+            "name": "Warning Call",
+            "weight": 327,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "armour"
+            ]
+          },
+          {
+            "name": "Rattling Bellow",
+            "weight": 1745,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack",
+              "attribute"
+            ]
+          },
+          {
+            "name": "Holy Word",
+            "weight": 873,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "fire"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_affliction_critical_chance",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_affliction_critical_chance",
+        "enchant_text": [
+          "15 % increased Critical Strike Chance"
+        ],
+        "notables": [
+          {
+            "name": "Precise Retaliation",
+            "weight": 457,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "critical"
+            ]
+          },
+          {
+            "name": "Skullbreaker",
+            "weight": 171,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "critical"
+            ]
+          },
+          {
+            "name": "Pressure Points",
+            "weight": 457,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "critical"
+            ]
+          },
+          {
+            "name": "Overwhelming Malice",
+            "weight": 171,
+            "level": 68,
+            "type": "Prefix",
+            "tags": []
+          },
+          {
+            "name": "Magnifier",
+            "weight": 914,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "critical"
+            ]
+          },
+          {
+            "name": "Savage Response",
+            "weight": 457,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "critical"
+            ]
+          },
+          {
+            "name": "Eye of the Storm",
+            "weight": 457,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "fire",
+              "cold",
+              "lightning",
+              "critical",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Basics of Pain",
+            "weight": 914,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "critical"
+            ]
+          },
+          {
+            "name": "Quick Getaway",
+            "weight": 914,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "attack",
+              "caster",
+              "speed",
+              "critical"
+            ]
+          },
+          {
+            "name": "Provocateur",
+            "weight": 457,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "critical"
+            ]
+          },
+          {
+            "name": "Haemorrhage",
+            "weight": 457,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "critical",
+              "ailment"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_affliction_minion_life",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_affliction_minion_life",
+        "enchant_text": [
+          "Minions have  12 % increased maximum Life"
+        ],
+        "notables": [
+          {
+            "name": "Renewal",
+            "weight": 716,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "minion"
+            ]
+          },
+          {
+            "name": "Hulking Corpses",
+            "weight": 716,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "minion"
+            ]
+          },
+          {
+            "name": "Dread March",
+            "weight": 1433,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "chaos",
+              "resistance",
+              "speed",
+              "minion"
+            ]
+          },
+          {
+            "name": "Blessed Rebirth",
+            "weight": 269,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "minion"
+            ]
+          },
+          {
+            "name": "Life from Death",
+            "weight": 716,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "minion"
+            ]
+          },
+          {
+            "name": "Feasting Fiends",
+            "weight": 1433,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "minion"
+            ]
+          },
+          {
+            "name": "Bodyguards",
+            "weight": 716,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "minion"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_affliction_area_damage",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_affliction_area_damage",
+        "enchant_text": [
+          "10 % increased Area Damage"
+        ],
+        "notables": [
+          {
+            "name": "Magnifier",
+            "weight": 1959,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "critical"
+            ]
+          },
+          {
+            "name": "Assert Dominance",
+            "weight": 367,
+            "level": 68,
+            "type": "Prefix",
+            "tags": []
+          },
+          {
+            "name": "Vast Power",
+            "weight": 980,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage"
+            ]
+          },
+          {
+            "name": "Powerful Assault",
+            "weight": 980,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage"
+            ]
+          },
+          {
+            "name": "Titanic Swings",
+            "weight": 980,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Towering Threat",
+            "weight": 367,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life"
+            ]
+          },
+          {
+            "name": "Expansive Might",
+            "weight": 367,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_affliction_projectile_damage",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_affliction_projectile_damage",
+        "enchant_text": [
+          "10 % increased Projectile Damage"
+        ],
+        "notables": [
+          {
+            "name": "Follow-Through",
+            "weight": 333,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage"
+            ]
+          },
+          {
+            "name": "Streamlined",
+            "weight": 1778,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "speed"
+            ]
+          },
+          {
+            "name": "Shrieking Bolts",
+            "weight": 889,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage"
+            ]
+          },
+          {
+            "name": "Eye to Eye",
+            "weight": 889,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage"
+            ]
+          },
+          {
+            "name": "Repeater",
+            "weight": 1778,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack",
+              "caster",
+              "speed"
+            ]
+          },
+          {
+            "name": "Aerodynamics",
+            "weight": 333,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "speed"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_affliction_trap_and_mine_damage",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_affliction_trap_and_mine_damage",
+        "enchant_text": [
+          "12 % increased Trap Damage",
+          "12 % increased Mine Damage"
+        ],
+        "notables": [
+          {
+            "name": "Set and Forget",
+            "weight": 980,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage"
+            ]
+          },
+          {
+            "name": "Expert Sabotage",
+            "weight": 980,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "speed"
+            ]
+          },
+          {
+            "name": "Guerilla Tactics",
+            "weight": 1959,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "speed"
+            ]
+          },
+          {
+            "name": "Expendability",
+            "weight": 367,
+            "level": 68,
+            "type": "Prefix",
+            "tags": []
+          },
+          {
+            "name": "Arcane Pyrotechnics",
+            "weight": 367,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage"
+            ]
+          },
+          {
+            "name": "Surprise Sabotage",
+            "weight": 980,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "critical"
+            ]
+          },
+          {
+            "name": "Careful Handling",
+            "weight": 367,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "mana",
+              "damage"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_affliction_totem_damage",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_affliction_totem_damage",
+        "enchant_text": [
+          "12 % increased Totem Damage"
+        ],
+        "notables": [
+          {
+            "name": "Ancestral Echo",
+            "weight": 1477,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "attack",
+              "caster",
+              "speed"
+            ]
+          },
+          {
+            "name": "Ancestral Reach",
+            "weight": 1477,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "speed"
+            ]
+          },
+          {
+            "name": "Ancestral Might",
+            "weight": 738,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage"
+            ]
+          },
+          {
+            "name": "Ancestral Preservation",
+            "weight": 277,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "chaos",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Snaring Spirits",
+            "weight": 738,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage"
+            ]
+          },
+          {
+            "name": "Sleepless Sentries",
+            "weight": 277,
+            "level": 68,
+            "type": "Prefix",
+            "tags": []
+          },
+          {
+            "name": "Ancestral Guidance",
+            "weight": 738,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "speed"
+            ]
+          },
+          {
+            "name": "Ancestral Inspiration",
+            "weight": 277,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "caster"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_affliction_brand_damage",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_affliction_brand_damage",
+        "enchant_text": [
+          "12 % increased Brand Damage"
+        ],
+        "notables": [
+          {
+            "name": "Chip Away",
+            "weight": 1171,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "caster",
+              "speed"
+            ]
+          },
+          {
+            "name": "Seeker Runes",
+            "weight": 439,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "caster"
+            ]
+          },
+          {
+            "name": "Remarkable",
+            "weight": 439,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "caster",
+              "speed"
+            ]
+          },
+          {
+            "name": "Brand Loyalty",
+            "weight": 2341,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "caster"
+            ]
+          },
+          {
+            "name": "Holy Conquest",
+            "weight": 1171,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "caster",
+              "speed"
+            ]
+          },
+          {
+            "name": "Grand Design",
+            "weight": 439,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "caster",
+              "speed"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_affliction_channelling_skill_damage",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_affliction_channelling_skill_damage",
+        "enchant_text": [
+          "Channelling Skills deal  12 % increased Damage"
+        ],
+        "notables": [
+          {
+            "name": "Vital Focus",
+            "weight": 1811,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage"
+            ]
+          },
+          {
+            "name": "Unrestrained Focus",
+            "weight": 340,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "speed"
+            ]
+          },
+          {
+            "name": "Unwavering Focus",
+            "weight": 906,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "damage"
+            ]
+          },
+          {
+            "name": "Enduring Focus",
+            "weight": 113,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "damage"
+            ]
+          },
+          {
+            "name": "Precise Focus",
+            "weight": 906,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "critical"
+            ]
+          },
+          {
+            "name": "Stoic Focus",
+            "weight": 1811,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage"
+            ]
+          },
+          {
+            "name": "Hex Breaker",
+            "weight": 113,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "attack",
+              "caster",
+              "speed",
+              "curse"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_affliction_flask_duration",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_affliction_flask_duration",
+        "enchant_text": [
+          "6 % increased Flask Effect Duration"
+        ],
+        "notables": [
+          {
+            "name": "Distilled Perfection",
+            "weight": 1079,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "mana"
+            ]
+          },
+          {
+            "name": "Spiked Concoction",
+            "weight": 539,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "attack",
+              "caster",
+              "speed"
+            ]
+          },
+          {
+            "name": "Fasting",
+            "weight": 539,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "speed"
+            ]
+          },
+          {
+            "name": "Mender's Wellspring",
+            "weight": 202,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life"
+            ]
+          },
+          {
+            "name": "Special Reserve",
+            "weight": 1079,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage"
+            ]
+          },
+          {
+            "name": "Numbing Elixir",
+            "weight": 202,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "caster",
+              "ailment",
+              "curse"
+            ]
+          },
+          {
+            "name": "Brewed for Potency",
+            "weight": 1079,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "mana",
+              "damage"
+            ]
+          },
+          {
+            "name": "Peak Vigour",
+            "weight": 1079,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life"
+            ]
+          },
+          {
+            "name": "Liquid Inspiration",
+            "weight": 202,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Medium_Cluster_Jewel_affliction_life_and_mana_recovery_from_flasks",
+        "enchant_url": "https://poedb.tw/us/Medium_Cluster_Jewel_affliction_life_and_mana_recovery_from_flasks",
+        "enchant_text": [
+          "10 % increased Life Recovery from Flasks",
+          "10 % increased Mana Recovery from Flasks"
+        ],
+        "notables": [
+          {
+            "name": "Distilled Perfection",
+            "weight": 1778,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "mana"
+            ]
+          },
+          {
+            "name": "Spiked Concoction",
+            "weight": 889,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "attack",
+              "caster",
+              "speed"
+            ]
+          },
+          {
+            "name": "Fasting",
+            "weight": 889,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "speed"
+            ]
+          },
+          {
+            "name": "Mender's Wellspring",
+            "weight": 333,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life"
+            ]
+          },
+          {
+            "name": "Special Reserve",
+            "weight": 1778,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage"
+            ]
+          },
+          {
+            "name": "Numbing Elixir",
+            "weight": 333,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "caster",
+              "ailment",
+              "curse"
+            ]
+          }
+        ]
+      }
+    ],
+    "prefixes": [
+      {
+        "name": "Hale",
+        "text": "Added Small Passive Skills also grant: +(2—3) to Maximum Life",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Healthy",
+        "text": "Added Small Passive Skills also grant: +(4—7) to Maximum Life",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "Sanguine",
+        "text": "Added Small Passive Skills also grant: +(8—10) to Maximum Life",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "Beryl",
+        "text": "Added Small Passive Skills also grant: +(2—5) to Maximum Mana",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Cobalt",
+        "text": "Added Small Passive Skills also grant: +(6—8) to Maximum Mana",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "Azure",
+        "text": "Added Small Passive Skills also grant: +(9—10) to Maximum Mana",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "Shining",
+        "text": "Added Small Passive Skills also grant: +(4—5) to Maximum Energy Shield",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Glimmering",
+        "text": "Added Small Passive Skills also grant: +(6—9) to Maximum Energy Shield",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "Glowing",
+        "text": "Added Small Passive Skills also grant: +(10—12) to Maximum Energy Shield",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "Lacquered",
+        "text": "Added Small Passive Skills also grant: +(11—20) to Armour",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Studded",
+        "text": "Added Small Passive Skills also grant: +(21—30) to Armour",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "Ribbed",
+        "text": "Added Small Passive Skills also grant: +(31—40) to Armour",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "Agile",
+        "text": "Added Small Passive Skills also grant: +(11—20) to Evasion",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Dancer's",
+        "text": "Added Small Passive Skills also grant: +(21—30) to Evasion",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "Acrobat's",
+        "text": "Added Small Passive Skills also grant: +(31—40) to Evasion",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "Harmful",
+        "text": "Added Small Passive Skills also grant: 2% increased Damage",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Hazardous",
+        "text": "Added Small Passive Skills also grant: 3% increased Damage",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "Dangerous",
+        "text": "Added Small Passive Skills also grant: 4% increased Damage",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "Potent",
+        "text": "Added Small Passive Skills have 25% increased Effect",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Powerful",
+        "text": "Added Small Passive Skills have 35% increased Effect",
+        "level": 84,
+        "weight": 300
+      }
+    ],
+    "suffixes": [
+      {
+        "name": "of the Brute",
+        "text": "Added Small Passive Skills also grant: +(2—3) to Strength",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Wrestler",
+        "text": "Added Small Passive Skills also grant: +(4—5) to Strength",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Bear",
+        "text": "Added Small Passive Skills also grant: +(6—8) to Strength",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "of the Mongoose",
+        "text": "Added Small Passive Skills also grant: +(2—3) to Dexterity",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Lynx",
+        "text": "Added Small Passive Skills also grant: +(4—5) to Dexterity",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Fox",
+        "text": "Added Small Passive Skills also grant: +(6—8) to Dexterity",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "of the Pupil",
+        "text": "Added Small Passive Skills also grant: +(2—3) to Intelligence",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Student",
+        "text": "Added Small Passive Skills also grant: +(4—5) to Intelligence",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Prodigy",
+        "text": "Added Small Passive Skills also grant: +(6—8) to Intelligence",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "of the Cloud",
+        "text": "Added Small Passive Skills also grant: +2 to All Attributes",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Sky",
+        "text": "Added Small Passive Skills also grant: +3 to All Attributes",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Meteor",
+        "text": "Added Small Passive Skills also grant: +4 to All Attributes",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "of Excitement",
+        "text": "Added Small Passive Skills also grant: 4% increased Mana Regeneration Rate",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of Joy",
+        "text": "Added Small Passive Skills also grant: 5% increased Mana Regeneration Rate",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of Elation",
+        "text": "Added Small Passive Skills also grant: 6% increased Mana Regeneration Rate",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "of the Newt",
+        "text": "Added Small Passive Skills also grant: Regenerate 0.1% of Life per Second",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Lizard",
+        "text": "Added Small Passive Skills also grant: Regenerate 0.15% of Life per Second",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Flatworm",
+        "text": "Added Small Passive Skills also grant: Regenerate 0.2% of Life per Second",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "of the Whelpling",
+        "text": "Added Small Passive Skills also grant: +(2—3)% to Fire Resistance",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Salamander",
+        "text": "Added Small Passive Skills also grant: +(4—5)% to Fire Resistance",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Drake",
+        "text": "Added Small Passive Skills also grant: +(6—7)% to Fire Resistance",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "of the Inuit",
+        "text": "Added Small Passive Skills also grant: +(2—3)% to Cold Resistance",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Seal",
+        "text": "Added Small Passive Skills also grant: +(4—5)% to Cold Resistance",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Penguin",
+        "text": "Added Small Passive Skills also grant: +(6—7)% to Cold Resistance",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "of the Cloud",
+        "text": "Added Small Passive Skills also grant: +(2—3)% to Lightning Resistance",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Squall",
+        "text": "Added Small Passive Skills also grant: +(4—5)% to Lightning Resistance",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Storm",
+        "text": "Added Small Passive Skills also grant: +(6—7)% to Lightning Resistance",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "of the Crystal",
+        "text": "Added Small Passive Skills also grant: +2% to all Elemental Resistances",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Prism",
+        "text": "Added Small Passive Skills also grant: +3% to all Elemental Resistances",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Kaleidoscope",
+        "text": "Added Small Passive Skills also grant: +4% to all Elemental Resistances",
+        "level": 84,
+        "weight": 300
+      },
+      {
+        "name": "of the Lost",
+        "text": "Added Small Passive Skills also grant: +3% to Chaos Resistance",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of Banishment",
+        "text": "Added Small Passive Skills also grant: +4% to Chaos Resistance",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of Eviction",
+        "text": "Added Small Passive Skills also grant: +5% to Chaos Resistance",
+        "level": 84,
+        "weight": 300
+      }
+    ]
+  },
+  "Small": {
+    "enchants": [
+      {
+        "enchant_slug": "Small_Cluster_Jewel_affliction_maximum_life",
+        "enchant_url": "https://poedb.tw/us/Small_Cluster_Jewel_affliction_maximum_life",
+        "enchant_text": [
+          "4 % increased maximum Life"
+        ],
+        "notables": [
+          {
+            "name": "Gladiator's Fortitude",
+            "weight": 146,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Towering Threat",
+            "weight": 146,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life"
+            ]
+          },
+          {
+            "name": "Flow of Life",
+            "weight": 146,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "damage"
+            ]
+          },
+          {
+            "name": "Brush with Death",
+            "weight": 146,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "defences",
+              "energy_shield",
+              "damage"
+            ]
+          },
+          {
+            "name": "Careful Handling",
+            "weight": 146,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "mana",
+              "damage"
+            ]
+          },
+          {
+            "name": "Peak Vigour",
+            "weight": 780,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life"
+            ]
+          },
+          {
+            "name": "Fettle",
+            "weight": 49,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "life"
+            ]
+          },
+          {
+            "name": "Feast of Flesh",
+            "weight": 146,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "attack"
+            ]
+          },
+          {
+            "name": "Sublime Sensation",
+            "weight": 390,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "defences",
+              "energy_shield"
+            ]
+          },
+          {
+            "name": "Surging Vitality",
+            "weight": 780,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life"
+            ]
+          },
+          {
+            "name": "Peace Amidst Chaos",
+            "weight": 390,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "defences",
+              "armour"
+            ]
+          },
+          {
+            "name": "Adrenaline",
+            "weight": 146,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life"
+            ]
+          },
+          {
+            "name": "Wall of Muscle",
+            "weight": 49,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "attribute"
+            ]
+          },
+          {
+            "name": "Holistic Health",
+            "weight": 146,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "mana"
+            ]
+          },
+          {
+            "name": "Heart of Iron",
+            "weight": 146,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "armour"
+            ]
+          },
+          {
+            "name": "Natural Vigour",
+            "weight": 390,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "defences",
+              "evasion"
+            ]
+          },
+          {
+            "name": "Vicious Guard",
+            "weight": 780,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "attack"
+            ]
+          },
+          {
+            "name": "Rote Reinforcement",
+            "weight": 146,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life"
+            ]
+          },
+          {
+            "name": "Sage",
+            "weight": 780,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "mana",
+              "elemental",
+              "lightning",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Blessed",
+            "weight": 146,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "mana",
+              "chaos",
+              "resistance"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Small_Cluster_Jewel_affliction_maximum_energy_shield",
+        "enchant_url": "https://poedb.tw/us/Small_Cluster_Jewel_affliction_maximum_energy_shield",
+        "enchant_text": [
+          "6 % increased maximum Energy Shield"
+        ],
+        "notables": [
+          {
+            "name": "Brush with Death",
+            "weight": 189,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "defences",
+              "energy_shield",
+              "damage"
+            ]
+          },
+          {
+            "name": "Vile Reinvigoration",
+            "weight": 505,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "energy_shield",
+              "damage"
+            ]
+          },
+          {
+            "name": "Sublime Sensation",
+            "weight": 505,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "defences",
+              "energy_shield"
+            ]
+          },
+          {
+            "name": "Savour the Moment",
+            "weight": 1011,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "energy_shield"
+            ]
+          },
+          {
+            "name": "Energy From Naught",
+            "weight": 505,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "energy_shield"
+            ]
+          },
+          {
+            "name": "Will Shaper",
+            "weight": 63,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "energy_shield"
+            ]
+          },
+          {
+            "name": "Spring Back",
+            "weight": 1011,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "energy_shield"
+            ]
+          },
+          {
+            "name": "Conservation of Energy",
+            "weight": 189,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "energy_shield",
+              "caster"
+            ]
+          },
+          {
+            "name": "Mystical Ward",
+            "weight": 1011,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "energy_shield"
+            ]
+          },
+          {
+            "name": "Self-Control",
+            "weight": 505,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "mana"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Small_Cluster_Jewel_affliction_maximum_mana",
+        "enchant_url": "https://poedb.tw/us/Small_Cluster_Jewel_affliction_maximum_mana",
+        "enchant_text": [
+          "6 % increased maximum Mana"
+        ],
+        "notables": [
+          {
+            "name": "Eldritch Inspiration",
+            "weight": 466,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "damage",
+              "chaos"
+            ]
+          },
+          {
+            "name": "Careful Handling",
+            "weight": 175,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "mana",
+              "damage"
+            ]
+          },
+          {
+            "name": "Mindfulness",
+            "weight": 466,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "mana"
+            ]
+          },
+          {
+            "name": "Liquid Inspiration",
+            "weight": 175,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana"
+            ]
+          },
+          {
+            "name": "Openness",
+            "weight": 932,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "mana"
+            ]
+          },
+          {
+            "name": "Daring Ideas",
+            "weight": 466,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "attack"
+            ]
+          },
+          {
+            "name": "Clarity of Purpose",
+            "weight": 932,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "mana"
+            ]
+          },
+          {
+            "name": "Scintillating Idea",
+            "weight": 466,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "damage",
+              "elemental",
+              "lightning"
+            ]
+          },
+          {
+            "name": "Holistic Health",
+            "weight": 175,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "mana"
+            ]
+          },
+          {
+            "name": "Genius",
+            "weight": 58,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "attribute"
+            ]
+          },
+          {
+            "name": "Improvisor",
+            "weight": 175,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "attack"
+            ]
+          },
+          {
+            "name": "Stubborn Student",
+            "weight": 175,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "defences",
+              "armour"
+            ]
+          },
+          {
+            "name": "Will Shaper",
+            "weight": 58,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "energy_shield"
+            ]
+          },
+          {
+            "name": "Wizardry",
+            "weight": 175,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "elemental",
+              "lightning",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Sage",
+            "weight": 932,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "mana",
+              "elemental",
+              "lightning",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Blessed",
+            "weight": 175,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "mana",
+              "chaos",
+              "resistance"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Small_Cluster_Jewel_affliction_armour",
+        "enchant_url": "https://poedb.tw/us/Small_Cluster_Jewel_affliction_armour",
+        "enchant_text": [
+          "15 % increased Armour"
+        ],
+        "notables": [
+          {
+            "name": "Battle-Hardened",
+            "weight": 696,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "armour",
+              "evasion",
+              "physical"
+            ]
+          },
+          {
+            "name": "Stubborn Student",
+            "weight": 261,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "defences",
+              "armour"
+            ]
+          },
+          {
+            "name": "Heart of Iron",
+            "weight": 261,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "armour"
+            ]
+          },
+          {
+            "name": "Prismatic Carapace",
+            "weight": 87,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "armour",
+              "elemental",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Militarism",
+            "weight": 696,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "defences",
+              "armour"
+            ]
+          },
+          {
+            "name": "Second Skin",
+            "weight": 1391,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "armour"
+            ]
+          },
+          {
+            "name": "Dragon Hunter",
+            "weight": 696,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "armour",
+              "elemental",
+              "fire",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Enduring Composure",
+            "weight": 261,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "armour"
+            ]
+          },
+          {
+            "name": "Blacksmith",
+            "weight": 261,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "defences",
+              "armour",
+              "elemental",
+              "fire",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Uncompromising",
+            "weight": 696,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "mana"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Small_Cluster_Jewel_affliction_evasion",
+        "enchant_url": "https://poedb.tw/us/Small_Cluster_Jewel_affliction_evasion",
+        "enchant_text": [
+          "15 % increased Evasion Rating"
+        ],
+        "notables": [
+          {
+            "name": "Battle-Hardened",
+            "weight": 658,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "armour",
+              "evasion",
+              "physical"
+            ]
+          },
+          {
+            "name": "Prismatic Dance",
+            "weight": 82,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "evasion",
+              "elemental",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Natural Vigour",
+            "weight": 658,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "defences",
+              "evasion"
+            ]
+          },
+          {
+            "name": "Untouchable",
+            "weight": 1315,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "evasion"
+            ]
+          },
+          {
+            "name": "Shifting Shadow",
+            "weight": 658,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "evasion",
+              "attribute"
+            ]
+          },
+          {
+            "name": "Readiness",
+            "weight": 1315,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "evasion",
+              "physical",
+              "attack",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Sublime Form",
+            "weight": 658,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "elemental",
+              "resistance"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Small_Cluster_Jewel_affliction_chance_to_block",
+        "enchant_url": "https://poedb.tw/us/Small_Cluster_Jewel_affliction_chance_to_block",
+        "enchant_text": [
+          "+2 % Chance to Block Attack Damage"
+        ],
+        "notables": [
+          {
+            "name": "Prodigious Defence",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Strike Leader",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Powerful Ward",
+            "weight": 141,
+            "level": 68,
+            "type": "Prefix",
+            "tags": []
+          },
+          {
+            "name": "Enduring Ward",
+            "weight": 141,
+            "level": 68,
+            "type": "Prefix",
+            "tags": []
+          },
+          {
+            "name": "Stoic Focus",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage"
+            ]
+          },
+          {
+            "name": "Mage Bane",
+            "weight": 141,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Second Skin",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "armour"
+            ]
+          },
+          {
+            "name": "Flexible Sentry",
+            "weight": 375,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "ailment"
+            ]
+          },
+          {
+            "name": "Vicious Guard",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "attack"
+            ]
+          },
+          {
+            "name": "Mystical Ward",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "energy_shield"
+            ]
+          },
+          {
+            "name": "Rote Reinforcement",
+            "weight": 141,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life"
+            ]
+          },
+          {
+            "name": "Mage Hunter",
+            "weight": 141,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "caster"
+            ]
+          },
+          {
+            "name": "Riot Queller",
+            "weight": 47,
+            "level": 75,
+            "type": "Prefix",
+            "tags": []
+          },
+          {
+            "name": "One with the Shield",
+            "weight": 375,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "defences"
+            ]
+          },
+          {
+            "name": "Fiery Aegis",
+            "weight": 750,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "fire"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Small_Cluster_Jewel_affliction_chance_to_block",
+        "enchant_url": "https://poedb.tw/us/Small_Cluster_Jewel_affliction_chance_to_block",
+        "enchant_text": [
+          "2 % Chance to Block Spell Damage"
+        ],
+        "notables": [
+          {
+            "name": "Prodigious Defence",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Strike Leader",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Powerful Ward",
+            "weight": 141,
+            "level": 68,
+            "type": "Prefix",
+            "tags": []
+          },
+          {
+            "name": "Enduring Ward",
+            "weight": 141,
+            "level": 68,
+            "type": "Prefix",
+            "tags": []
+          },
+          {
+            "name": "Stoic Focus",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage"
+            ]
+          },
+          {
+            "name": "Mage Bane",
+            "weight": 141,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Second Skin",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "armour"
+            ]
+          },
+          {
+            "name": "Flexible Sentry",
+            "weight": 375,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "ailment"
+            ]
+          },
+          {
+            "name": "Vicious Guard",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "attack"
+            ]
+          },
+          {
+            "name": "Mystical Ward",
+            "weight": 750,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "energy_shield"
+            ]
+          },
+          {
+            "name": "Rote Reinforcement",
+            "weight": 141,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life"
+            ]
+          },
+          {
+            "name": "Mage Hunter",
+            "weight": 141,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "caster"
+            ]
+          },
+          {
+            "name": "Riot Queller",
+            "weight": 47,
+            "level": 75,
+            "type": "Prefix",
+            "tags": []
+          },
+          {
+            "name": "One with the Shield",
+            "weight": 375,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "defences"
+            ]
+          },
+          {
+            "name": "Fiery Aegis",
+            "weight": 750,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "fire"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Small_Cluster_Jewel_affliction_fire_resistance",
+        "enchant_url": "https://poedb.tw/us/Small_Cluster_Jewel_affliction_fire_resistance",
+        "enchant_text": [
+          "+15 % to Fire Resistance"
+        ],
+        "notables": [
+          {
+            "name": "Prismatic Heart",
+            "weight": 1315,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Prismatic Carapace",
+            "weight": 82,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "armour",
+              "elemental",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Dragon Hunter",
+            "weight": 658,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "armour",
+              "elemental",
+              "fire",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Prismatic Dance",
+            "weight": 82,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "evasion",
+              "elemental",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Flexible Sentry",
+            "weight": 658,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "ailment"
+            ]
+          },
+          {
+            "name": "Molten One's Mark",
+            "weight": 247,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "elemental",
+              "fire",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Fire Attunement",
+            "weight": 1315,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "fire",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Pure Might",
+            "weight": 247,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "attribute"
+            ]
+          },
+          {
+            "name": "Blacksmith",
+            "weight": 247,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "defences",
+              "armour",
+              "elemental",
+              "fire",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Non-Flammable",
+            "weight": 658,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "fire",
+              "resistance",
+              "ailment"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Small_Cluster_Jewel_affliction_cold_resistance",
+        "enchant_url": "https://poedb.tw/us/Small_Cluster_Jewel_affliction_cold_resistance",
+        "enchant_text": [
+          "+15 % to Cold Resistance"
+        ],
+        "notables": [
+          {
+            "name": "Prismatic Heart",
+            "weight": 1371,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Prismatic Carapace",
+            "weight": 86,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "armour",
+              "elemental",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Prismatic Dance",
+            "weight": 86,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "evasion",
+              "elemental",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Flexible Sentry",
+            "weight": 686,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "ailment"
+            ]
+          },
+          {
+            "name": "Winter Prowler",
+            "weight": 257,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "cold",
+              "resistance",
+              "speed"
+            ]
+          },
+          {
+            "name": "Hibernator",
+            "weight": 686,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "cold",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Pure Guile",
+            "weight": 257,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "attribute"
+            ]
+          },
+          {
+            "name": "Alchemist",
+            "weight": 1371,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "cold",
+              "resistance",
+              "attack",
+              "caster",
+              "speed"
+            ]
+          },
+          {
+            "name": "Antifreeze",
+            "weight": 686,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "cold",
+              "resistance",
+              "ailment"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Small_Cluster_Jewel_affliction_lightning_resistance",
+        "enchant_url": "https://poedb.tw/us/Small_Cluster_Jewel_affliction_lightning_resistance",
+        "enchant_text": [
+          "+15 % to Lightning Resistance"
+        ],
+        "notables": [
+          {
+            "name": "Prismatic Heart",
+            "weight": 1371,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "elemental",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Prismatic Carapace",
+            "weight": 86,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "armour",
+              "elemental",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Prismatic Dance",
+            "weight": 86,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "evasion",
+              "elemental",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Flexible Sentry",
+            "weight": 686,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "ailment"
+            ]
+          },
+          {
+            "name": "Wizardry",
+            "weight": 257,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "elemental",
+              "lightning",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Capacitor",
+            "weight": 686,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "lightning",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Pure Aptitude",
+            "weight": 257,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "defences",
+              "energy_shield",
+              "attribute"
+            ]
+          },
+          {
+            "name": "Sage",
+            "weight": 1371,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "mana",
+              "elemental",
+              "lightning",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Insulated",
+            "weight": 686,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "lightning",
+              "resistance",
+              "ailment"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Small_Cluster_Jewel_affliction_chaos_resistance",
+        "enchant_url": "https://poedb.tw/us/Small_Cluster_Jewel_affliction_chaos_resistance",
+        "enchant_text": [
+          "+12 % to Chaos Resistance"
+        ],
+        "notables": [
+          {
+            "name": "Exposure Therapy",
+            "weight": 2341,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Born of Chaos",
+            "weight": 439,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "chaos",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Antivenom",
+            "weight": 1171,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "chaos",
+              "resistance",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Rot-Resistant",
+            "weight": 439,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "mana",
+              "defences",
+              "energy_shield",
+              "chaos",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Blessed",
+            "weight": 439,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "life",
+              "mana",
+              "chaos",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Student of Decay",
+            "weight": 1171,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "chaos",
+              "resistance"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Small_Cluster_Jewel_affliction_chance_to_dodge_attacks",
+        "enchant_url": "https://poedb.tw/us/Small_Cluster_Jewel_affliction_chance_to_dodge_attacks",
+        "enchant_text": [
+          "+4 % chance to Suppress Spell Damage"
+        ],
+        "notables": [
+          {
+            "name": "Hit and Run",
+            "weight": 1477,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "attack"
+            ]
+          },
+          {
+            "name": "Untouchable",
+            "weight": 1477,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "defences",
+              "evasion"
+            ]
+          },
+          {
+            "name": "Aerialist",
+            "weight": 92,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "attribute"
+            ]
+          },
+          {
+            "name": "Elegant Form",
+            "weight": 1477,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "ailment"
+            ]
+          },
+          {
+            "name": "Darting Movements",
+            "weight": 1477,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "speed"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Small_Cluster_Jewel_affliction_reservation_efficiency_small",
+        "enchant_url": "https://poedb.tw/us/Small_Cluster_Jewel_affliction_reservation_efficiency_small",
+        "enchant_text": [
+          "6 % increased Mana Reservation Efficiency of Skills"
+        ],
+        "notables": [
+          {
+            "name": "Replenishing Presence",
+            "weight": 480,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "aura"
+            ]
+          },
+          {
+            "name": "Master of Command",
+            "weight": 180,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "aura"
+            ]
+          },
+          {
+            "name": "Spiteful Presence",
+            "weight": 960,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "elemental",
+              "cold",
+              "aura",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Purposeful Harbinger",
+            "weight": 60,
+            "level": 75,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "aura"
+            ]
+          },
+          {
+            "name": "Destructive Aspect",
+            "weight": 180,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "aura"
+            ]
+          },
+          {
+            "name": "Electric Presence",
+            "weight": 180,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "elemental",
+              "lightning",
+              "aura",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Volatile Presence",
+            "weight": 480,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "elemental",
+              "fire",
+              "aura",
+              "ailment"
+            ]
+          },
+          {
+            "name": "Righteous Path",
+            "weight": 960,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "aura"
+            ]
+          },
+          {
+            "name": "Pure Might",
+            "weight": 180,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "attribute"
+            ]
+          },
+          {
+            "name": "Pure Guile",
+            "weight": 180,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "attribute"
+            ]
+          },
+          {
+            "name": "Pure Aptitude",
+            "weight": 180,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "defences",
+              "energy_shield",
+              "attribute"
+            ]
+          },
+          {
+            "name": "Self-Control",
+            "weight": 480,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "mana"
+            ]
+          },
+          {
+            "name": "Uncompromising",
+            "weight": 480,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "mana"
+            ]
+          },
+          {
+            "name": "Sublime Form",
+            "weight": 480,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "elemental",
+              "resistance"
+            ]
+          },
+          {
+            "name": "Mortifying Aspect",
+            "weight": 180,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "chaos",
+              "resistance",
+              "aura"
+            ]
+          },
+          {
+            "name": "Frantic Aspect",
+            "weight": 180,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "mana",
+              "speed",
+              "aura"
+            ]
+          },
+          {
+            "name": "Introspection",
+            "weight": 180,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "aura"
+            ]
+          }
+        ]
+      },
+      {
+        "enchant_slug": "Small_Cluster_Jewel_affliction_curse_effect_small",
+        "enchant_url": "https://poedb.tw/us/Small_Cluster_Jewel_affliction_curse_effect_small",
+        "enchant_text": [
+          "2 % increased Effect of your Curses"
+        ],
+        "notables": [
+          {
+            "name": "Evil Eye",
+            "weight": 706,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "caster",
+              "curse"
+            ]
+          },
+          {
+            "name": "Doedre's Spite",
+            "weight": 353,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "caster",
+              "curse"
+            ]
+          },
+          {
+            "name": "Victim Maker",
+            "weight": 353,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "caster",
+              "speed",
+              "curse"
+            ]
+          },
+          {
+            "name": "Lord of Drought",
+            "weight": 353,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "caster",
+              "curse"
+            ]
+          },
+          {
+            "name": "Blizzard Caller",
+            "weight": 353,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "caster",
+              "critical",
+              "curse"
+            ]
+          },
+          {
+            "name": "Tempt the Storm",
+            "weight": 353,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "caster",
+              "speed",
+              "curse"
+            ]
+          },
+          {
+            "name": "Misery Everlasting",
+            "weight": 353,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "caster",
+              "curse"
+            ]
+          },
+          {
+            "name": "Exploit Weakness",
+            "weight": 353,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "physical",
+              "caster",
+              "curse"
+            ]
+          },
+          {
+            "name": "Hound's Mark",
+            "weight": 706,
+            "level": 1,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "caster",
+              "curse"
+            ]
+          },
+          {
+            "name": "Doedre's Gluttony",
+            "weight": 353,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "damage",
+              "caster",
+              "curse"
+            ]
+          },
+          {
+            "name": "Doedre's Apathy",
+            "weight": 132,
+            "level": 68,
+            "type": "Prefix",
+            "tags": [
+              "caster",
+              "curse"
+            ]
+          },
+          {
+            "name": "Master of the Maelstrom",
+            "weight": 353,
+            "level": 50,
+            "type": "Prefix",
+            "tags": [
+              "elemental",
+              "caster",
+              "ailment",
+              "curse"
+            ]
+          }
+        ]
+      }
+    ],
+    "prefixes": [
+      {
+        "name": "Hale",
+        "text": "Added Small Passive Skills also grant: +(2—3) to Maximum Life",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Healthy",
+        "text": "Added Small Passive Skills also grant: +(4—7) to Maximum Life",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "Sanguine",
+        "text": "Added Small Passive Skills also grant: +(8—10) to Maximum Life",
+        "level": 73,
+        "weight": 300
+      },
+      {
+        "name": "Stalwart",
+        "text": "Added Small Passive Skills also grant: +(11—13) to Maximum Life",
+        "level": 78,
+        "weight": 200
+      },
+      {
+        "name": "Stout",
+        "text": "Added Small Passive Skills also grant: +(14—16) to Maximum Life",
+        "level": 84,
+        "weight": 100
+      },
+      {
+        "name": "Beryl",
+        "text": "Added Small Passive Skills also grant: +(2—5) to Maximum Mana",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Cobalt",
+        "text": "Added Small Passive Skills also grant: +(6—8) to Maximum Mana",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "Azure",
+        "text": "Added Small Passive Skills also grant: +(9—10) to Maximum Mana",
+        "level": 73,
+        "weight": 300
+      },
+      {
+        "name": "Sapphire",
+        "text": "Added Small Passive Skills also grant: +(11—13) to Maximum Mana",
+        "level": 78,
+        "weight": 200
+      },
+      {
+        "name": "Cerulean",
+        "text": "Added Small Passive Skills also grant: +(14—16) to Maximum Mana",
+        "level": 84,
+        "weight": 100
+      },
+      {
+        "name": "Shining",
+        "text": "Added Small Passive Skills also grant: +(4—5) to Maximum Energy Shield",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Glimmering",
+        "text": "Added Small Passive Skills also grant: +(6—9) to Maximum Energy Shield",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "Glowing",
+        "text": "Added Small Passive Skills also grant: +(10—12) to Maximum Energy Shield",
+        "level": 73,
+        "weight": 300
+      },
+      {
+        "name": "Radiating",
+        "text": "Added Small Passive Skills also grant: +(13—16) to Maximum Energy Shield",
+        "level": 78,
+        "weight": 200
+      },
+      {
+        "name": "Pulsing",
+        "text": "Added Small Passive Skills also grant: +(17—20) to Maximum Energy Shield",
+        "level": 84,
+        "weight": 100
+      },
+      {
+        "name": "Lacquered",
+        "text": "Added Small Passive Skills also grant: +(11—20) to Armour",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Studded",
+        "text": "Added Small Passive Skills also grant: +(21—30) to Armour",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "Ribbed",
+        "text": "Added Small Passive Skills also grant: +(31—40) to Armour",
+        "level": 73,
+        "weight": 300
+      },
+      {
+        "name": "Fortified",
+        "text": "Added Small Passive Skills also grant: +(41—53) to Armour",
+        "level": 78,
+        "weight": 200
+      },
+      {
+        "name": "Plated",
+        "text": "Added Small Passive Skills also grant: +(54—66) to Armour",
+        "level": 84,
+        "weight": 100
+      },
+      {
+        "name": "Agile",
+        "text": "Added Small Passive Skills also grant: +(11—20) to Evasion",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Dancer's",
+        "text": "Added Small Passive Skills also grant: +(21—30) to Evasion",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "Acrobat's",
+        "text": "Added Small Passive Skills also grant: +(31—40) to Evasion",
+        "level": 73,
+        "weight": 300
+      },
+      {
+        "name": "Fleet",
+        "text": "Added Small Passive Skills also grant: +(41—53) to Evasion",
+        "level": 78,
+        "weight": 200
+      },
+      {
+        "name": "Blurred",
+        "text": "Added Small Passive Skills also grant: +(54—66) to Evasion",
+        "level": 84,
+        "weight": 100
+      },
+      {
+        "name": "Harmful",
+        "text": "Added Small Passive Skills also grant: 2% increased Damage",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Hazardous",
+        "text": "Added Small Passive Skills also grant: 3% increased Damage",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "Dangerous",
+        "text": "Added Small Passive Skills also grant: 4% increased Damage",
+        "level": 73,
+        "weight": 300
+      },
+      {
+        "name": "Destructive",
+        "text": "Added Small Passive Skills also grant: 5% increased Damage",
+        "level": 78,
+        "weight": 200
+      },
+      {
+        "name": "Deadly",
+        "text": "Added Small Passive Skills also grant: 6% increased Damage",
+        "level": 84,
+        "weight": 100
+      },
+      {
+        "name": "Potent",
+        "text": "Added Small Passive Skills have 25% increased Effect",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "Powerful",
+        "text": "Added Small Passive Skills have 35% increased Effect",
+        "level": 84,
+        "weight": 300
+      }
+    ],
+    "suffixes": [
+      {
+        "name": "of the Brute",
+        "text": "Added Small Passive Skills also grant: +(2—3) to Strength",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Wrestler",
+        "text": "Added Small Passive Skills also grant: +(4—5) to Strength",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Bear",
+        "text": "Added Small Passive Skills also grant: +(6—8) to Strength",
+        "level": 73,
+        "weight": 300
+      },
+      {
+        "name": "of the Lion",
+        "text": "Added Small Passive Skills also grant: +(9—11) to Strength",
+        "level": 78,
+        "weight": 200
+      },
+      {
+        "name": "of the Gorilla",
+        "text": "Added Small Passive Skills also grant: +(12—14) to Strength",
+        "level": 84,
+        "weight": 100
+      },
+      {
+        "name": "of the Mongoose",
+        "text": "Added Small Passive Skills also grant: +(2—3) to Dexterity",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Lynx",
+        "text": "Added Small Passive Skills also grant: +(4—5) to Dexterity",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Fox",
+        "text": "Added Small Passive Skills also grant: +(6—8) to Dexterity",
+        "level": 73,
+        "weight": 300
+      },
+      {
+        "name": "of the Falcon",
+        "text": "Added Small Passive Skills also grant: +(9—11) to Dexterity",
+        "level": 78,
+        "weight": 200
+      },
+      {
+        "name": "of the Panther",
+        "text": "Added Small Passive Skills also grant: +(12—14) to Dexterity",
+        "level": 84,
+        "weight": 100
+      },
+      {
+        "name": "of the Pupil",
+        "text": "Added Small Passive Skills also grant: +(2—3) to Intelligence",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Student",
+        "text": "Added Small Passive Skills also grant: +(4—5) to Intelligence",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Prodigy",
+        "text": "Added Small Passive Skills also grant: +(6—8) to Intelligence",
+        "level": 73,
+        "weight": 300
+      },
+      {
+        "name": "of the Augur",
+        "text": "Added Small Passive Skills also grant: +(9—11) to Intelligence",
+        "level": 78,
+        "weight": 200
+      },
+      {
+        "name": "of the Philosopher",
+        "text": "Added Small Passive Skills also grant: +(12—14) to Intelligence",
+        "level": 84,
+        "weight": 100
+      },
+      {
+        "name": "of the Cloud",
+        "text": "Added Small Passive Skills also grant: +2 to All Attributes",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Sky",
+        "text": "Added Small Passive Skills also grant: +3 to All Attributes",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Meteor",
+        "text": "Added Small Passive Skills also grant: +4 to All Attributes",
+        "level": 73,
+        "weight": 300
+      },
+      {
+        "name": "of the Comet",
+        "text": "Added Small Passive Skills also grant: +5 to All Attributes",
+        "level": 78,
+        "weight": 200
+      },
+      {
+        "name": "of the Heavens",
+        "text": "Added Small Passive Skills also grant: +6 to All Attributes",
+        "level": 84,
+        "weight": 100
+      },
+      {
+        "name": "of Excitement",
+        "text": "Added Small Passive Skills also grant: 4% increased Mana Regeneration Rate",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of Joy",
+        "text": "Added Small Passive Skills also grant: 5% increased Mana Regeneration Rate",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of Elation",
+        "text": "Added Small Passive Skills also grant: 6% increased Mana Regeneration Rate",
+        "level": 73,
+        "weight": 300
+      },
+      {
+        "name": "of Bliss",
+        "text": "Added Small Passive Skills also grant: (7—8)% increased Mana Regeneration Rate",
+        "level": 78,
+        "weight": 200
+      },
+      {
+        "name": "of Euphoria",
+        "text": "Added Small Passive Skills also grant: (9—10)% increased Mana Regeneration Rate",
+        "level": 84,
+        "weight": 100
+      },
+      {
+        "name": "of the Newt",
+        "text": "Added Small Passive Skills also grant: Regenerate 0.1% of Life per Second",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Lizard",
+        "text": "Added Small Passive Skills also grant: Regenerate 0.15% of Life per Second",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Flatworm",
+        "text": "Added Small Passive Skills also grant: Regenerate 0.2% of Life per Second",
+        "level": 73,
+        "weight": 300
+      },
+      {
+        "name": "of the Starfish",
+        "text": "Added Small Passive Skills also grant: Regenerate 0.25% of Life per Second",
+        "level": 78,
+        "weight": 200
+      },
+      {
+        "name": "of the Hydra",
+        "text": "Added Small Passive Skills also grant: Regenerate 0.3% of Life per Second",
+        "level": 84,
+        "weight": 100
+      },
+      {
+        "name": "of the Whelpling",
+        "text": "Added Small Passive Skills also grant: +(2—3)% to Fire Resistance",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Salamander",
+        "text": "Added Small Passive Skills also grant: +(4—5)% to Fire Resistance",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Drake",
+        "text": "Added Small Passive Skills also grant: +(6—7)% to Fire Resistance",
+        "level": 73,
+        "weight": 300
+      },
+      {
+        "name": "of the Kiln",
+        "text": "Added Small Passive Skills also grant: +(8—9)% to Fire Resistance",
+        "level": 78,
+        "weight": 200
+      },
+      {
+        "name": "of the Furnace",
+        "text": "Added Small Passive Skills also grant: +(10—11)% to Fire Resistance",
+        "level": 84,
+        "weight": 100
+      },
+      {
+        "name": "of the Inuit",
+        "text": "Added Small Passive Skills also grant: +(2—3)% to Cold Resistance",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Seal",
+        "text": "Added Small Passive Skills also grant: +(4—5)% to Cold Resistance",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Penguin",
+        "text": "Added Small Passive Skills also grant: +(6—7)% to Cold Resistance",
+        "level": 73,
+        "weight": 300
+      },
+      {
+        "name": "of the Yeti",
+        "text": "Added Small Passive Skills also grant: +(8—9)% to Cold Resistance",
+        "level": 78,
+        "weight": 200
+      },
+      {
+        "name": "of the Walrus",
+        "text": "Added Small Passive Skills also grant: +(10—11)% to Cold Resistance",
+        "level": 84,
+        "weight": 100
+      },
+      {
+        "name": "of the Cloud",
+        "text": "Added Small Passive Skills also grant: +(2—3)% to Lightning Resistance",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Squall",
+        "text": "Added Small Passive Skills also grant: +(4—5)% to Lightning Resistance",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Storm",
+        "text": "Added Small Passive Skills also grant: +(6—7)% to Lightning Resistance",
+        "level": 73,
+        "weight": 300
+      },
+      {
+        "name": "of the Thunderhead",
+        "text": "Added Small Passive Skills also grant: +(8—9)% to Lightning Resistance",
+        "level": 78,
+        "weight": 200
+      },
+      {
+        "name": "of the Tempest",
+        "text": "Added Small Passive Skills also grant: +(10—11)% to Lightning Resistance",
+        "level": 84,
+        "weight": 100
+      },
+      {
+        "name": "of the Crystal",
+        "text": "Added Small Passive Skills also grant: +2% to all Elemental Resistances",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of the Prism",
+        "text": "Added Small Passive Skills also grant: +3% to all Elemental Resistances",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of the Kaleidoscope",
+        "text": "Added Small Passive Skills also grant: +4% to all Elemental Resistances",
+        "level": 73,
+        "weight": 300
+      },
+      {
+        "name": "of Variegation",
+        "text": "Added Small Passive Skills also grant: +5% to all Elemental Resistances",
+        "level": 78,
+        "weight": 200
+      },
+      {
+        "name": "of the Rainbow",
+        "text": "Added Small Passive Skills also grant: +6% to all Elemental Resistances",
+        "level": 84,
+        "weight": 100
+      },
+      {
+        "name": "of the Lost",
+        "text": "Added Small Passive Skills also grant: +3% to Chaos Resistance",
+        "level": 1,
+        "weight": 500
+      },
+      {
+        "name": "of Banishment",
+        "text": "Added Small Passive Skills also grant: +4% to Chaos Resistance",
+        "level": 68,
+        "weight": 400
+      },
+      {
+        "name": "of Eviction",
+        "text": "Added Small Passive Skills also grant: +5% to Chaos Resistance",
+        "level": 73,
+        "weight": 300
+      },
+      {
+        "name": "of Expulsion",
+        "text": "Added Small Passive Skills also grant: +6% to Chaos Resistance",
+        "level": 78,
+        "weight": 200
+      },
+      {
+        "name": "of Exile",
+        "text": "Added Small Passive Skills also grant: +(7—8)% to Chaos Resistance",
+        "level": 84,
+        "weight": 100
+      }
+    ]
+  }
+}

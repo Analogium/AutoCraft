@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoCraft</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+
+    /* ── Palette "dim" ───────────────────────────────────────────────────
+       Fond: #1e1e24  Surface: #28282f  Bordure: #38383f
+       Texte: #e2e2e8  Muted: #8b8b96   Input: #1a1a20
+    ──────────────────────────────────────────────────────────────────── */
+
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-track { background: #28282f; }
+    ::-webkit-scrollbar-thumb { background: #4a4a54; border-radius: 99px; }
+    ::-webkit-scrollbar-thumb:hover { background: #66666e; }
+
+    .inp {
+      background: #1a1a20;
+      border: 1px solid #3a3a42;
+      @apply rounded-md px-3 py-1.5 text-sm outline-none transition-all font-mono;
+      color: #e2e2e8;
+    }
+    .inp::placeholder { color: #55555e; }
+    .inp:focus { border-color: transparent; box-shadow: 0 0 0 2px #6366f1; }
+
+    .inp-sm {
+      background: #1a1a20;
+      border: 1px solid #3a3a42;
+      @apply rounded-md px-2 py-1 text-xs outline-none transition-all font-mono w-16 text-center;
+      color: #e2e2e8;
+    }
+    .inp-sm:focus { border-color: transparent; box-shadow: 0 0 0 2px #6366f1; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      border-radius: 8px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+      letter-spacing: 0.01em;
+    }
+    .btn:disabled { opacity: 0.38; cursor: not-allowed; pointer-events: none; }
+
+    /* Ghost — actions secondaires (header, footer) */
+    .btn-ghost {
+      @apply btn;
+      padding: 6px 12px;
+      background: transparent;
+      border: 1px solid transparent;
+      color: #8b8b96;
+    }
+    .btn-ghost:hover { background: #2f2f38; border-color: #3a3a42; color: #c8c8d0; }
+
+    /* Outline — action standard (Ajouter, Charger…) */
+    .btn-outline {
+      @apply btn;
+      padding: 6px 14px;
+      background: #1e1e24;
+      border: 1.5px solid #4a4a54;
+      color: #c0c0ca;
+    }
+    .btn-outline:hover { background: #28282f; border-color: #6666708; color: #e2e2e8; border-color: #666670; }
+
+    /* Destructive — Supprimer, Effacer */
+    .btn-destructive {
+      @apply btn;
+      padding: 6px 14px;
+      background: #1e1e24;
+      border: 1.5px solid #5c2a2a;
+      color: #f87171;
+    }
+    .btn-destructive:hover { background: #2a1818; border-color: #7a3838; }
+
+    /* Capture — bouton bleu Capturer */
+    .btn-capture {
+      @apply btn;
+      padding: 6px 14px;
+      background: #1a2030;
+      border: 1.5px solid #2a4a70;
+      color: #60a5fa;
+    }
+    .btn-capture:hover { background: #1c2e44; border-color: #3a66a0; }
+
+    /* Start — vert */
+    .btn-start {
+      @apply btn;
+      padding: 8px 22px;
+      background: #166534;
+      border: 1.5px solid #22c55e44;
+      color: #86efac;
+      font-weight: 600;
+      box-shadow: 0 1px 4px #00000040, inset 0 1px 0 #22c55e22;
+    }
+    .btn-start:hover { background: #15803d; border-color: #22c55e66; }
+
+    /* Stop — rouge */
+    .btn-stop {
+      @apply btn;
+      padding: 8px 22px;
+      background: #1e1e24;
+      border: 1.5px solid #5c2a2a;
+      color: #f87171;
+    }
+    .btn-stop:hover { background: #2a1818; border-color: #7a3838; }
+
+    /* Pause — amber */
+    .btn-pause {
+      @apply btn;
+      padding: 8px 22px;
+      background: #1e1e24;
+      border: 1.5px solid #5a4010;
+      color: #fbbf24;
+    }
+    .btn-pause:hover { background: #28200a; border-color: #7a5818; }
+
+    .card { background:#28282f; border:1px solid #38383f; @apply rounded-xl overflow-hidden; }
+    .card-header { background:#2f2f38; border-bottom:1px solid #38383f; @apply px-4 py-3 flex items-center gap-2; }
+    .card-body { @apply p-4; }
+
+    .badge { @apply inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full border; }
+    .badge-idle    { background:#28282f; border-color:#3a3a42; color:#8b8b96; }
+    .badge-running { background:#0d2a1a; border-color:#166534; color:#4ade80; }
+    .badge-paused  { background:#2a2010; border-color:#5a4010; color:#fbbf24; }
+
+    .tab-btn {
+      padding: 10px 18px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      color: #4a4a58;
+      transition: all 0.15s;
+      user-select: none;
+    }
+    .tab-btn:hover { color: #a0a0ae; background: #222228; }
+    .tab-btn.active {
+      color: #e2e2e8;
+      border-bottom-color: #6366f1;
+      background: #22222a;
+    }
+
+    .subtab-bar {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 8px 20px;
+      background: #1e1e24;
+      border-bottom: 1px solid #38383f;
+    }
+    .subtab-btn {
+      padding: 5px 14px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      border-radius: 6px;
+      cursor: pointer;
+      color: #4a4a58;
+      border: 1px solid transparent;
+      transition: all 0.15s;
+      user-select: none;
+    }
+    .subtab-btn:hover { background: #2f2f38; color: #a0a0ae; border-color: #3a3a42; }
+    .subtab-btn.active {
+      background: #2f2f38;
+      color: #e2e2e8;
+      border-color: #4e4e5a;
+    }
+
+    .radio-group {
+      display: inline-flex;
+      background: #1a1a20;
+      border: 1px solid #38383f;
+      border-radius: 8px;
+      padding: 3px;
+      gap: 2px;
+    }
+    .radio-pill {
+      padding: 5px 18px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s;
+      color: #4a4a58;
+      border: 1px solid transparent;
+      user-select: none;
+    }
+    .radio-pill:hover { color: #a0a0ae; background: #2a2a32; }
+    .radio-pill.active {
+      background: #4f46e5;
+      border-color: #6366f1;
+      color: #fff;
+      box-shadow: 0 1px 4px #0000004a;
+    }
+
+    .list-item { @apply px-3 py-2 text-sm cursor-pointer transition-colors; color:#b0b0ba; }
+    .list-item:hover { background:#2f2f38; }
+    .list-item.selected { background:#1e1e3a; color:#a5b4fc; box-shadow:inset 0 0 0 1px #3730a3; }
+    .list-item-blue { color:#60a5fa; }
+    .list-item-blue:hover { background:#1a2a3a; }
+    .list-item-blue.selected { background:#0f1f30; color:#93c5fd; box-shadow:inset 0 0 0 1px #1e40af; }
+    .list-item-orange { color:#fb923c; }
+    .list-item-orange:hover { background:#2a1e10; }
+    .list-item-orange.selected { background:#1e1008; color:#fdba74; box-shadow:inset 0 0 0 1px #92400e; }
+
+    .log-line { @apply text-xs font-mono leading-relaxed whitespace-pre-wrap; }
+    .log-line.info    { color:#8b8b96; }
+    .log-line.success { color:#4ade80; }
+    .log-line.warn    { color:#fbbf24; }
+    .log-line.error   { color:#f87171; }
+    .log-line.header  { color:#a5b4fc; font-weight:600; }
+
+    .section-dot { @apply w-2 h-2 rounded-full shrink-0; }
+
+    /* Textes génériques dim */
+    .text-muted-dim  { color: #8b8b96; }
+    .text-title-dim  { color: #e2e2e8; }
+    .card-header span.font-semibold { color: #c8c8d0; }
+
+    /* Backgrounds listes */
+    .list-bg { background: #1e1e24; border: 1px solid #38383f; }
+
+    /* Log area */
+    .log-bg { background: #18181e; }
+  </style>
+</head>
+
+<body style="background:#1e1e24;color:#e2e2e8;" class="h-screen flex flex-col overflow-hidden select-none"
+      x-data="app"
+      @keydown.f5.window.prevent="startSession()"
+      @keydown.f6.window.prevent="stopSession()"
+      @keydown.f7.window.prevent="togglePause()">
+
+  <!-- ── HEADER ──────────────────────────────────────────────────────────── -->
+  <header class="flex items-center justify-between px-5 py-3 shrink-0" style="background:#28282f;border-bottom:1px solid #38383f;">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center">
+        <span class="text-white font-bold text-xs">AC</span>
+      </div>
+      <div>
+        <span class="font-semibold text-sm" style="color:#e2e2e8;">AutoCraft</span>
+        <span class="text-xs ml-2" style="color:#55555e;">POE1 · Cluster Jewel</span>
+      </div>
+    </div>
+    <div>
+      <span x-show="status === 'idle'"    class="badge-idle">   <span class="w-1.5 h-1.5 rounded-full bg-zinc-400"></span>   En attente</span>
+      <span x-show="status === 'running'" class="badge-running"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> En cours</span>
+      <span x-show="status === 'paused'"  class="badge-paused"> <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>  En pause</span>
+    </div>
+  </header>
+
+  <!-- ── TABS ────────────────────────────────────────────────────────────── -->
+  <nav class="flex items-end gap-0 px-5 shrink-0" style="background:#28282f;border-bottom:1px solid #38383f;">
+    <button class="tab-btn" :class="{active: view==='craft'}" @click="view='craft'">Craft</button>
+    <button class="tab-btn" :class="{active: view==='log'}"   @click="view='log'">
+      Log
+      <span x-show="logs.length > 0 && view !== 'log'"
+            class="ml-1 text-xs bg-indigo-600 text-white rounded-full px-1.5 leading-4"
+            x-text="logs.length > 99 ? '99+' : logs.length"></span>
+    </button>
+  </nav>
+
+  <!-- ── CONTENU ─────────────────────────────────────────────────────────── -->
+  <main class="flex-1 overflow-hidden flex flex-col">
+
+    <!-- ── VUE CRAFT ───────────────────────────────────────────────────────── -->
+    <div x-show="view==='craft'" class="flex-1 flex flex-col overflow-hidden">
+      <div class="subtab-bar shrink-0">
+        <button class="subtab-btn" :class="{active: craftTab===0}" @click="craftTab=0">Double Passifs</button>
+        <button class="subtab-btn" :class="{active: craftTab===1}" @click="craftTab=1">Cluster Guidé</button>
+      </div>
+
+      <!-- ── DOUBLE PASSIFS ───────────────────────────────────────────────── -->
+      <div x-show="craftTab===0" class="flex-1 overflow-y-auto px-5 pb-4 space-y-3">
+
+        <!-- Items -->
+        <div class="card">
+          <div class="card-header">
+            <span class="section-dot bg-indigo-500"></span>
+            <span class="text-sm font-semibold font-semibold">Items à crafter</span>
+          </div>
+          <div class="card-body space-y-3">
+            <div class="rounded-lg overflow-hidden min-h-[64px] max-h-28 overflow-y-auto" style="background:#1e1e24;border:1px solid #38383f;">
+              <template x-for="(item, i) in itemPositions" :key="i">
+                <div class="list-item text-muted-dim flex items-center justify-between"
+                     :class="{selected: selectedItemIdx===i}" @click="selectedItemIdx=i">
+                  <span class="font-medium">Item <span x-text="i+1"></span></span>
+                  <span class="text-muted-dim text-xs font-mono" x-text="`(${item.x}, ${item.y})`"></span>
+                </div>
+              </template>
+              <div x-show="itemPositions.length===0" class="px-3 py-2.5 text-xs text-muted-dim">Aucun item ajouté</div>
+            </div>
+            <div class="flex gap-2">
+              <button class="btn-outline" @click="captureItemPos('double')">+ Ajouter</button>
+              <button class="btn-destructive" @click="removeItemPos('double')" :disabled="selectedItemIdx===null">− Supprimer</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Currencies -->
+        <div class="card">
+          <div class="card-header">
+            <span class="section-dot bg-amber-400"></span>
+            <span class="text-sm font-semibold font-semibold">Currencies</span>
+            <span class="text-xs text-muted-dim ml-1">· clic → 3s → capture souris</span>
+          </div>
+          <div class="card-body">
+            <div class="grid grid-cols-2 gap-x-8 gap-y-2.5">
+              <template x-for="slot in currencySlots" :key="slot.key">
+                <div class="flex items-center gap-2">
+                  <span class="text-muted-dim text-xs w-36 shrink-0" x-text="slot.label"></span>
+                  <span class="text-muted-dim text-xs">X</span>
+                  <input class="inp-sm" type="number" :value="positions[slot.key].x"
+                         @change="positions[slot.key].x = +$event.target.value" />
+                  <span class="text-muted-dim text-xs">Y</span>
+                  <input class="inp-sm" type="number" :value="positions[slot.key].y"
+                         @change="positions[slot.key].y = +$event.target.value" />
+                  <button class="btn-capture" @click="capturePos(slot.key, slot.label)">Capturer</button>
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+
+        <!-- CSV -->
+        <div class="card">
+          <div class="card-header">
+            <span class="section-dot bg-yellow-400"></span>
+            <span class="text-sm font-semibold font-semibold">Combinaisons CSV</span>
+          </div>
+          <div class="card-body space-y-3">
+            <div class="flex items-center gap-2">
+              <div class="flex-1 inp text-muted-dim text-xs py-1.5 cursor-default"
+                   x-text="csvFilename || 'Aucun fichier chargé'"></div>
+              <button class="btn-outline" @click="pickCsv()">Charger CSV</button>
+              <button class="btn-destructive" @click="clearCsv()" x-show="csvRows.length>0">Effacer</button>
+            </div>
+            <div class="rounded-lg overflow-hidden max-h-32 overflow-y-auto" style="background:#1e1e24;border:1px solid #38383f;">
+              <template x-for="(row, i) in csvRows" :key="i">
+                <div class="list-item text-muted-dim flex items-center gap-2"
+                     :class="{selected: selectedCsvRow===i}" @click="selectCsvRow(i)">
+                  <span class="font-medium text-xs" x-text="row.notables.join(' + ')"></span>
+                  <template x-if="row.passives"><span class="text-muted-dim text-xs" x-text="`[${row.passives}]`"></span></template>
+                  <template x-if="row.avg_chaos"><span class="text-yellow-600 text-xs font-medium" x-text="`~${row.avg_chaos}c`"></span></template>
+                </div>
+              </template>
+              <div x-show="csvRows.length===0" class="px-3 py-2.5 text-xs text-muted-dim">Aucune combinaison chargée</div>
+            </div>
+            <div x-show="csvRows.length>0" class="text-xs text-amber-600 flex items-center gap-1">
+              <span>⚠</span> CSV chargé — la section Notables est ignorée
+            </div>
+          </div>
+        </div>
+
+        <!-- Notables -->
+        <div class="card" :class="{'opacity-50 pointer-events-none': csvRows.length>0}">
+          <div class="card-header">
+            <span class="section-dot bg-purple-500"></span>
+            <span class="text-sm font-semibold font-semibold">Notables requis</span>
+            <span class="text-xs text-muted-dim ml-1">· nom exact, un par ligne</span>
+          </div>
+          <div class="card-body">
+            <textarea class="inp h-24 resize-none"
+                      placeholder="Ex : Rote Reinforcement&#10;Herculean Form"
+                      x-model="manualNotables"></textarea>
+          </div>
+        </div>
+
+        <!-- Options -->
+        <div class="card">
+          <div class="card-header">
+            <span class="section-dot bg-zinc-400"></span>
+            <span class="text-sm font-semibold font-semibold">Options</span>
+          </div>
+          <div class="card-body">
+            <div class="flex items-center gap-6 flex-wrap">
+              <div class="flex items-center gap-2 text-sm text-muted-dim">
+                Délai
+                <input class="inp-sm" type="number" step="0.05" x-model.number="delayMin" />
+                <span class="text-muted-dim">→</span>
+                <input class="inp-sm" type="number" step="0.05" x-model.number="delayMax" />
+                <span class="text-muted-dim text-xs">s</span>
+              </div>
+              <div class="flex items-center gap-2 text-sm text-muted-dim">
+                Itérations max
+                <input class="inp-sm w-20" type="number" x-model.number="maxIter" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="h-2"></div>
+      </div>
+
+      <!-- ── CLUSTER GUIDÉ ────────────────────────────────────────────────── -->
+      <div x-show="craftTab===1" class="flex-1 overflow-y-auto px-5 pb-4 space-y-3">
+
+        <!-- Taille -->
+        <div class="card">
+          <div class="card-header">
+            <span class="section-dot bg-violet-500"></span>
+            <span class="text-sm font-semibold font-semibold">Taille de cluster</span>
+          </div>
+          <div class="card-body">
+            <div class="radio-group">
+              <template x-for="size in ['Large','Medium','Small']" :key="size">
+                <button class="radio-pill" :class="{active: guidedSize===size}"
+                        @click="guidedSize=size; updateGuidedEnchants()" x-text="size"></button>
+              </template>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enchant -->
+        <div class="card">
+          <div class="card-header">
+            <span class="section-dot bg-sky-500"></span>
+            <span class="text-sm font-semibold">Enchant</span>
+            <span class="text-xs text-muted-dim ml-1">· filtre optionnel — clic pour filtrer, re-clic pour tout voir</span>
+            <button x-show="guidedEnchantIdx !== null" class="btn-ghost text-xs py-0.5 px-2 ml-auto"
+                    @click="guidedEnchantIdx=null; loadAllNotables()">✕ Effacer filtre</button>
+          </div>
+          <div class="card-body">
+            <div class="rounded-lg overflow-hidden max-h-44 overflow-y-auto" style="background:#1e1e24;border:1px solid #38383f;">
+              <template x-for="(enchant, i) in guidedEnchants" :key="i">
+                <div class="list-item text-muted-dim" :class="{selected: guidedEnchantIdx===i}"
+                     @click="selectEnchant(i)">
+                  <span class="text-xs" x-text="enchant.enchant_text.join(' / ') || enchant.enchant_slug"></span>
+                </div>
+              </template>
+              <div x-show="guidedEnchants.length===0" class="px-3 py-2.5 text-xs text-muted-dim">Aucun enchant disponible</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Affixes à cibler -->
+        <div class="card">
+          <div class="card-header">
+            <span class="section-dot bg-indigo-500"></span>
+            <span class="text-sm font-semibold">Affixes à cibler</span>
+            <span class="text-xs text-muted-dim ml-1">· clic = sélectionner palier</span>
+          </div>
+          <div class="card-body">
+            <div class="grid gap-4" :class="(guidedSuffixGroups.length || guidedNotableSuffixes.length) ? 'grid-cols-2' : 'grid-cols-1'">
+
+              <!-- ── Préfixes ─────────────────────────────────────── -->
+              <div>
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="w-2 h-2 rounded-full bg-blue-500 shrink-0"></span>
+                  <span class="text-xs font-semibold" style="color:#60a5fa;">Préfixes</span>
+                  <span class="text-xs text-muted-dim ml-auto">
+                    <span x-show="guidedNotablePrefixes.length" style="color:#a5b4fc;" x-text="`${guidedNotablePrefixes.length} notable${guidedNotablePrefixes.length>1?'s':''} · `"></span><span x-text="`${guidedPrefixGroups.length} groupe${guidedPrefixGroups.length>1?'s':''}`"></span>
+                  </span>
+                </div>
+                <input class="inp w-full mb-2" placeholder="Rechercher…" x-model="guidedPrefixSearch" />
+                <div class="rounded-lg overflow-hidden max-h-56 overflow-y-auto" style="background:#1e1e24;border:1px solid #38383f;">
+                  <!-- Notables (enchant sélectionné) -->
+                  <template x-if="guidedNotablePrefixes.length">
+                    <div>
+                      <div class="px-3 py-1 text-xs font-semibold tracking-wider" style="background:#1e1e2e;color:#818cf8;">NOTABLES</div>
+                      <template x-for="n in guidedNotablePrefixes.filter(n => !guidedPrefixSearch || n.name.toLowerCase().includes(guidedPrefixSearch.toLowerCase()))" :key="n.name">
+                        <div class="list-item list-item-blue"
+                             :class="{selected: guidedSelectedPrefixNames.includes(n.name)}"
+                             @click="toggleNotable('prefix', n.name, $event)">
+                          <div class="font-medium text-xs" x-text="n.name"></div>
+                          <div class="text-muted-dim text-xs" x-text="`w:${n.weight} · lv:${n.level}`"></div>
+                        </div>
+                      </template>
+                    </div>
+                  </template>
+                  <!-- Groupes non-notables -->
+                  <template x-for="group in guidedPrefixGroups.filter(g => !guidedPrefixSearch || g.label.toLowerCase().includes(guidedPrefixSearch.toLowerCase()) || g.tiers.some(t => t.text.toLowerCase().includes(guidedPrefixSearch.toLowerCase())))" :key="group.key">
+                    <div>
+                      <div class="px-3 py-1 text-xs font-semibold tracking-wider" style="background:#1e1e2e;color:#64748b;" x-text="group.label.toUpperCase()"></div>
+                      <template x-for="tier in group.tiers" :key="tier.name">
+                        <div class="list-item list-item-blue"
+                             :class="{selected: guidedSelectedPrefixNames.includes(tier.name)}"
+                             @click="toggleNotable('prefix', tier.name, $event)">
+                          <div class="flex items-center gap-2 w-full min-w-0">
+                            <span class="font-mono text-xs shrink-0" style="color:#93c5fd;" x-text="tier.tierRange"></span>
+                            <span class="text-muted-dim text-xs truncate" x-text="tier.name"></span>
+                            <span class="text-muted-dim text-xs ml-auto shrink-0" x-text="`lv${tier.level}`"></span>
+                          </div>
+                        </div>
+                      </template>
+                    </div>
+                  </template>
+                  <div x-show="!guidedNotablePrefixes.filter(n => !guidedPrefixSearch || n.name.toLowerCase().includes(guidedPrefixSearch.toLowerCase())).length && !guidedPrefixGroups.filter(g => !guidedPrefixSearch || g.label.toLowerCase().includes(guidedPrefixSearch.toLowerCase()) || g.tiers.some(t => t.text.toLowerCase().includes(guidedPrefixSearch.toLowerCase()))).length"
+                       class="px-3 py-2.5 text-xs text-muted-dim">Aucun résultat</div>
+                </div>
+              </div>
+
+              <!-- ── Suffixes ─────────────────────────────────────── -->
+              <div x-show="guidedSuffixGroups.length || guidedNotableSuffixes.length">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span>
+                  <span class="text-xs font-semibold" style="color:#fb923c;">Suffixes</span>
+                  <span class="text-xs text-muted-dim ml-auto">
+                    <span x-show="guidedNotableSuffixes.length" style="color:#fdba74;" x-text="`${guidedNotableSuffixes.length} notable${guidedNotableSuffixes.length>1?'s':''} · `"></span><span x-text="`${guidedSuffixGroups.length} groupe${guidedSuffixGroups.length>1?'s':''}`"></span>
+                  </span>
+                </div>
+                <input class="inp w-full mb-2" placeholder="Rechercher…" x-model="guidedSuffixSearch" />
+                <div class="rounded-lg overflow-hidden max-h-56 overflow-y-auto" style="background:#1e1e24;border:1px solid #38383f;">
+                  <!-- Notables (enchant sélectionné) -->
+                  <template x-if="guidedNotableSuffixes.length">
+                    <div>
+                      <div class="px-3 py-1 text-xs font-semibold tracking-wider" style="background:#1e1e2e;color:#818cf8;">NOTABLES</div>
+                      <template x-for="n in guidedNotableSuffixes.filter(n => !guidedSuffixSearch || n.name.toLowerCase().includes(guidedSuffixSearch.toLowerCase()))" :key="n.name">
+                        <div class="list-item list-item-orange"
+                             :class="{selected: guidedSelectedSuffixNames.includes(n.name)}"
+                             @click="toggleNotable('suffix', n.name, $event)">
+                          <div class="font-medium text-xs" x-text="n.name"></div>
+                          <div class="text-muted-dim text-xs" x-text="`w:${n.weight} · lv:${n.level}`"></div>
+                        </div>
+                      </template>
+                    </div>
+                  </template>
+                  <!-- Groupes non-notables -->
+                  <template x-for="group in guidedSuffixGroups.filter(g => !guidedSuffixSearch || g.label.toLowerCase().includes(guidedSuffixSearch.toLowerCase()) || g.tiers.some(t => t.text.toLowerCase().includes(guidedSuffixSearch.toLowerCase())))" :key="group.key">
+                    <div>
+                      <div class="px-3 py-1 text-xs font-semibold tracking-wider" style="background:#1e1e2e;color:#64748b;" x-text="group.label.toUpperCase()"></div>
+                      <template x-for="tier in group.tiers" :key="tier.name">
+                        <div class="list-item list-item-orange"
+                             :class="{selected: guidedSelectedSuffixNames.includes(tier.name)}"
+                             @click="toggleNotable('suffix', tier.name, $event)">
+                          <div class="flex items-center gap-2 w-full min-w-0">
+                            <span class="font-mono text-xs shrink-0" style="color:#fdba74;" x-text="tier.tierRange"></span>
+                            <span class="text-muted-dim text-xs truncate" x-text="tier.name"></span>
+                            <span class="text-muted-dim text-xs ml-auto shrink-0" x-text="`lv${tier.level}`"></span>
+                          </div>
+                        </div>
+                      </template>
+                    </div>
+                  </template>
+                  <div x-show="!guidedNotableSuffixes.filter(n => !guidedSuffixSearch || n.name.toLowerCase().includes(guidedSuffixSearch.toLowerCase())).length && !guidedSuffixGroups.filter(g => !guidedSuffixSearch || g.label.toLowerCase().includes(guidedSuffixSearch.toLowerCase()) || g.tiers.some(t => t.text.toLowerCase().includes(guidedSuffixSearch.toLowerCase()))).length"
+                       class="px-3 py-2.5 text-xs text-muted-dim">Aucun résultat</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Positions -->
+        <div class="card">
+          <div class="card-header">
+            <span class="section-dot bg-emerald-500"></span>
+            <span class="text-sm font-semibold font-semibold">Positions</span>
+          </div>
+          <div class="card-body space-y-4">
+            <div>
+              <p class="text-xs font-medium text-muted-dim mb-2">Items à crafter</p>
+              <div class="rounded-lg overflow-hidden min-h-[52px] max-h-24 overflow-y-auto mb-2" style="background:#1e1e24;border:1px solid #38383f;">
+                <template x-for="(item, i) in guidedItemPositions" :key="i">
+                  <div class="list-item text-muted-dim flex items-center justify-between"
+                       :class="{selected: guidedSelectedItemIdx===i}" @click="guidedSelectedItemIdx=i">
+                    <span class="font-medium text-xs">Item <span x-text="i+1"></span></span>
+                    <span class="text-muted-dim text-xs font-mono" x-text="`(${item.x}, ${item.y})`"></span>
+                  </div>
+                </template>
+                <div x-show="guidedItemPositions.length===0" class="px-3 py-2.5 text-xs text-muted-dim">Aucun item</div>
+              </div>
+              <div class="flex gap-2">
+                <button class="btn-outline" @click="captureItemPos('guided')">+ Ajouter</button>
+                <button class="btn-destructive" @click="removeItemPos('guided')" :disabled="guidedSelectedItemIdx===null">− Supprimer</button>
+              </div>
+            </div>
+            <div class="pt-4" style="border-top:1px solid #38383f;">
+              <p class="text-xs font-medium text-muted-dim mb-3">Currencies · clic → 3s → capture</p>
+              <div class="grid grid-cols-2 gap-x-8 gap-y-2.5">
+                <template x-for="slot in currencySlots" :key="slot.key">
+                  <div class="flex items-center gap-2">
+                    <span class="text-muted-dim text-xs w-36 shrink-0" x-text="slot.label"></span>
+                    <span class="text-muted-dim text-xs">X</span>
+                    <input class="inp-sm" type="number" :value="gPositions[slot.key].x"
+                           @change="gPositions[slot.key].x = +$event.target.value" />
+                    <span class="text-muted-dim text-xs">Y</span>
+                    <input class="inp-sm" type="number" :value="gPositions[slot.key].y"
+                           @change="gPositions[slot.key].y = +$event.target.value" />
+                    <button class="btn-capture" @click="gCapturePos(slot.key, slot.label)">Capturer</button>
+                  </div>
+                </template>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Options guidé -->
+        <div class="card">
+          <div class="card-header">
+            <span class="section-dot bg-zinc-400"></span>
+            <span class="text-sm font-semibold font-semibold">Options</span>
+          </div>
+          <div class="card-body">
+            <div class="flex items-center gap-6 flex-wrap">
+              <div class="flex items-center gap-2 text-sm text-muted-dim">
+                Délai
+                <input class="inp-sm" type="number" step="0.05" x-model.number="gDelayMin" />
+                <span class="text-muted-dim">→</span>
+                <input class="inp-sm" type="number" step="0.05" x-model.number="gDelayMax" />
+                <span class="text-muted-dim text-xs">s</span>
+              </div>
+              <div class="flex items-center gap-2 text-sm text-muted-dim">
+                Itérations max
+                <input class="inp-sm w-20" type="number" x-model.number="gMaxIter" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="h-2"></div>
+      </div>
+    </div>
+
+    <!-- ── VUE LOG ──────────────────────────────────────────────────────────── -->
+    <div x-show="view==='log'" class="flex-1 flex flex-col overflow-hidden px-5 py-4">
+      <div class="card flex-1 flex flex-col overflow-hidden">
+        <div class="card-header justify-between">
+          <div class="flex items-center gap-2">
+            <span class="section-dot bg-zinc-400"></span>
+            <span class="text-sm font-semibold font-semibold">Log</span>
+            <span class="text-xs px-2 py-0.5 rounded-full" style="background:#2f2f38;color:#8b8b96;" x-text="`${logs.length} lignes`"></span>
+          </div>
+          <div class="flex gap-1">
+            <button class="btn-ghost text-xs py-1 px-2" @click="copyLogs()">Copier tout</button>
+            <button class="btn-ghost text-xs py-1 px-2 text-red-500 hover:text-red-600 hover:bg-red-50" @click="logs=[]">Vider</button>
+          </div>
+        </div>
+        <div id="log-content" class="flex-1 overflow-y-auto p-4 font-mono" style="background:#18181e;">
+          <template x-for="(line, i) in logs" :key="i">
+            <div class="log-line" :class="logClass(line)" x-text="line"></div>
+          </template>
+          <div x-show="logs.length===0" class="text-muted-dim text-xs">En attente de logs…</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ── BOTTOM BAR ───────────────────────────────────────────────────────── -->
+  <footer class="shrink-0 px-5 py-3 flex items-center gap-3" style="background:#28282f;border-top:1px solid #38383f;">
+    <button class="btn-start" @click="startSession()" :disabled="status==='running'">
+      ▶ Démarrer
+      <kbd class="text-xs opacity-60 ml-1 font-sans">F5</kbd>
+    </button>
+    <button class="btn-stop"  @click="stopSession()"  :disabled="status==='idle'">
+      ■ Arrêter <kbd class="text-xs opacity-60 ml-1 font-sans">F6</kbd>
+    </button>
+    <button class="btn-pause" @click="togglePause()"  :disabled="status==='idle'"
+            x-text="status==='paused' ? '▶ Reprendre' : '⏸ Pause'">
+    </button>
+    <kbd class="text-muted-dim text-xs font-sans">F7</kbd>
+
+    <div class="flex-1"></div>
+
+    <button class="btn-ghost text-xs" @click="testClipboard(); view='log'">Tester clipboard</button>
+    <button class="btn-ghost text-xs" @click="saveConfig()">Sauvegarder</button>
+  </footer>
+
+  <!-- ── MODAL CAPTURE ────────────────────────────────────────────────────── -->
+  <div x-show="showCapture"
+       x-transition:enter="transition ease-out duration-150"
+       x-transition:enter-start="opacity-0 scale-95"
+       x-transition:enter-end="opacity-100 scale-100"
+       class="fixed inset-0 bg-black/20 backdrop-blur-sm flex items-center justify-center z-50">
+    <div class="rounded-2xl p-7 w-80 text-center shadow-2xl" style="background:#28282f;border:1px solid #4a4a54;">
+      <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4"
+           style="background:#1e1e2e;border:2px solid #4f46e5;">
+        <span class="text-2xl font-bold" style="color:#818cf8;" x-text="captureCountdown"></span>
+      </div>
+      <p class="text-sm mb-1" style="color:#8b8b96;">Positionner la souris sur :</p>
+      <p class="text-sm font-semibold" style="color:#e2e2e8;" x-text="captureLabel"></p>
+      <div class="mt-5 h-1.5 rounded-full overflow-hidden" style="background:#38383f;">
+        <div class="h-full rounded-full transition-all duration-1000" style="background:#6366f1;"
+             :style="`width: ${(captureCountdown/3)*100}%`"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ALPINE ────────────────────────────────────────────────────────────── -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+    const CURRENCY_SLOTS = [
+      {key:'transmutation', label:'Orb of Transmutation'},
+      {key:'alteration',    label:'Orb of Alteration'},
+      {key:'augmentation',  label:'Orb of Augmentation'},
+      {key:'regal',         label:'Regal Orb'},
+      {key:'exalted',       label:'Exalted Orb'},
+      {key:'scouring',      label:'Orb of Scouring'},
+    ]
+    const defPos = () => Object.fromEntries(CURRENCY_SLOTS.map(s => [s.key, {x:0,y:0}]))
+
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('app', () => ({
+        view: 'craft', craftTab: 0,
+        status: 'idle', logs: [],
+        currencySlots: CURRENCY_SLOTS,
+
+        positions: defPos(), itemPositions: [], selectedItemIdx: null,
+        manualNotables: '', csvRows: [], csvFilename: '', selectedCsvRow: null,
+        delayMin: 0.15, delayMax: 0.45, maxIter: 5000,
+
+        clusterMods: {}, guidedSize: 'Medium',
+        guidedEnchants: [], guidedEnchantIdx: null,
+        guidedPrefixes: [], guidedSuffixes: [],
+        guidedNotablePrefixes: [], guidedNotableSuffixes: [],
+        guidedPrefixGroups: [], guidedSuffixGroups: [],
+        _guidedAllPrefixes: [], _guidedAllSuffixes: [],
+        guidedSelectedPrefixNames: [], guidedSelectedSuffixNames: [],
+        guidedPrefixSearch: '', guidedSuffixSearch: '',
+        guidedItemPositions: [], guidedSelectedItemIdx: null,
+        gPositions: defPos(), gDelayMin: 0.15, gDelayMax: 0.45, gMaxIter: 5000,
+
+        showCapture: false, captureLabel: '', captureCountdown: 3,
+
+        async init() {
+          await new Promise(r => window.pywebview ? r() : window.addEventListener('pywebviewready', r, {once:true}))
+          this.clusterMods = await pywebview.api.get_cluster_mods()
+          const cfg = await pywebview.api.get_config()
+          if (cfg && Object.keys(cfg).length) this.applyConfig(cfg)
+          this.updateGuidedEnchants()
+          setInterval(() => this.pollStatus(), 500)
+          setInterval(() => this.pollLogs(),   300)
+        },
+
+        async pollStatus() { this.status = await pywebview.api.get_status() },
+        async pollLogs() {
+          const lines = await pywebview.api.get_logs()
+          if (lines?.length) {
+            this.logs.push(...lines)
+            this.$nextTick(() => {
+              const el = document.getElementById('log-content')
+              if (el) el.scrollTop = el.scrollHeight
+            })
+          }
+        },
+
+        logClass(l) {
+          if (l.startsWith('===')) return 'header'
+          if (l.startsWith('✓') || l.includes('terminé') || l.includes('crafted')) return 'success'
+          if (l.startsWith('⚠') || l.includes('WARN')) return 'warn'
+          if (l.startsWith('✗') || l.includes('ERREUR')) return 'error'
+          return 'info'
+        },
+        copyLogs() { navigator.clipboard.writeText(this.logs.join('\n')) },
+
+        updateGuidedEnchants() {
+          const block = this.clusterMods[this.guidedSize] || {}
+          this.guidedEnchants = block.enchants || []
+          this._guidedAllPrefixes = block.prefixes || []
+          this._guidedAllSuffixes = block.suffixes || []
+          this.guidedEnchantIdx = null
+          this._buildModLists([], [])
+        },
+        _normModText(text) {
+          let s = text.replace(/[+\-]?\([^)]*\)/g, '').replace(/[+\-]?\d+[\d,.]*/g, '')
+          return s.replace(/\s+/g, ' ').trim().toLowerCase()
+        },
+        _tierRange(text) {
+          const m = text.match(/[+\-]?\([^)]+\)/)
+          if (m) return m[0]
+          const n = text.match(/[+\-]?\d+[\d,.]*\s*%?/)
+          return n ? n[0] : '?'
+        },
+        _groupLabel(text) {
+          let s = text.replace(/[+\-]?\([^)]*\)/g, '').replace(/[+\-]?\d+[\d,.]*/g, '')
+          s = s.replace(/\s+/g, ' ').trim()
+          const ci = s.lastIndexOf(':')
+          return ci >= 0 ? s.slice(ci + 1).trim() : s
+        },
+        _buildModGroups(mods) {
+          const groups = new Map()
+          for (const m of mods) {
+            const key = this._normModText(m.text)
+            if (!groups.has(key)) groups.set(key, {key, label: this._groupLabel(m.text), tiers: []})
+            groups.get(key).tiers.push({...m, kind: 'mod', tierRange: this._tierRange(m.text)})
+          }
+          return [...groups.values()]
+        },
+        _buildModLists(notablePrefixes, notableSuffixes) {
+          const sp = new Set(), ss = new Set(), np = [], ns = []
+          // 1. Notables de l'enchant sélectionné
+          for (const n of notablePrefixes) { sp.add(n.name); np.push({name: n.name, text: n.name, weight: n.weight, level: n.level, kind: 'notable'}) }
+          for (const n of notableSuffixes) { ss.add(n.name); ns.push({name: n.name, text: n.name, weight: n.weight, level: n.level, kind: 'notable'}) }
+          this.guidedNotablePrefixes = np
+          this.guidedNotableSuffixes = ns
+          // 2. Mods explicites non-notables groupés par stat
+          const nnp = this._guidedAllPrefixes.filter(m => !sp.has(m.name))
+          const nns = this._guidedAllSuffixes.filter(m => !ss.has(m.name))
+          this.guidedPrefixGroups = this._buildModGroups(nnp)
+          this.guidedSuffixGroups = this._buildModGroups(nns)
+          // Liste plate pour startSession().find()
+          this.guidedPrefixes = [...np, ...nnp.map(m => ({...m, kind: 'mod'}))]
+          this.guidedSuffixes = [...ns, ...nns.map(m => ({...m, kind: 'mod'}))]
+          this.guidedPrefixSearch = ''; this.guidedSuffixSearch = ''
+          this.guidedSelectedPrefixNames = []; this.guidedSelectedSuffixNames = []
+        },
+        selectEnchant(i) {
+          if (this.guidedEnchantIdx === i) {
+            this.guidedEnchantIdx = null
+            this._buildModLists([], [])
+            return
+          }
+          this.guidedEnchantIdx = i
+          const notables = this.guidedEnchants[i]?.notables || []
+          this._buildModLists(
+            notables.filter(n => n.type === 'Prefix'),
+            notables.filter(n => n.type !== 'Prefix')
+          )
+        },
+        toggleNotable(type, name, event) {
+          const k = type === 'prefix' ? 'guidedSelectedPrefixNames' : 'guidedSelectedSuffixNames'
+          const idx = this[k].indexOf(name)
+          if (event.ctrlKey || event.metaKey) {
+            idx === -1 ? this[k].push(name) : this[k].splice(idx, 1)
+          } else {
+            this[k] = (idx === -1 || this[k].length > 1) ? [name] : []
+          }
+        },
+
+        async _doCapture(label) {
+          this.captureLabel = label; this.captureCountdown = 3; this.showCapture = true
+          const t = setInterval(() => { this.captureCountdown = Math.max(0, this.captureCountdown-1) }, 1000)
+          const pos = await pywebview.api.capture_position()
+          clearInterval(t); this.showCapture = false
+          return pos
+        },
+        async capturePos(key, label)  { this.positions[key]  = await this._doCapture(label) },
+        async gCapturePos(key, label) { this.gPositions[key] = await this._doCapture(label) },
+        async captureItemPos(tab) {
+          const len = tab==='guided' ? this.guidedItemPositions.length : this.itemPositions.length
+          const pos = await this._doCapture(`Item ${len+1}`)
+          tab==='guided' ? this.guidedItemPositions.push(pos) : this.itemPositions.push(pos)
+        },
+        removeItemPos(tab) {
+          if (tab==='guided') {
+            if (this.guidedSelectedItemIdx===null) return
+            this.guidedItemPositions.splice(this.guidedSelectedItemIdx, 1); this.guidedSelectedItemIdx=null
+          } else {
+            if (this.selectedItemIdx===null) return
+            this.itemPositions.splice(this.selectedItemIdx, 1); this.selectedItemIdx=null
+          }
+        },
+
+        async pickCsv() {
+          const path = await pywebview.api.pick_csv_file(); if (!path) return
+          const r = await pywebview.api.load_csv(path)
+          if (r.error) { alert('Erreur CSV : '+r.error); return }
+          this.csvRows = r.rows; this.csvFilename = r.filename
+        },
+        clearCsv() { this.csvRows=[]; this.csvFilename=''; this.selectedCsvRow=null },
+        selectCsvRow(i) { this.selectedCsvRow=i; this.manualNotables=this.csvRows[i].notables.join('\n') },
+
+        async startSession() {
+          const tab = this.craftTab; let config
+          if (tab===0) {
+            const notables = this.csvRows.length
+              ? [...new Set(this.csvRows.flatMap(r=>r.notables))]
+              : this.manualNotables.split('\n').map(s=>s.trim()).filter(Boolean)
+            if (!notables.length) { alert('Ajoute au moins un Notable.'); return }
+            if (!this.itemPositions.length) { alert("Ajoute au moins une position d'item."); return }
+            config = { positions:this.positions, item_positions:this.itemPositions,
+              required_notables:notables, required_combinations:this.csvRows.length?this.csvRows.map(r=>r.notables):[notables],
+              delay_min:this.delayMin, delay_max:this.delayMax, max_iterations:this.maxIter }
+          } else {
+            const prefixMods = this.guidedSelectedPrefixNames.map(name => {
+              const m = this.guidedPrefixes.find(p => p.name === name)
+              return m ? {name: m.name, text: m.text || m.name, kind: m.kind} : {name, text: name, kind: 'notable'}
+            })
+            const suffixMods = this.guidedSelectedSuffixNames.map(name => {
+              const m = this.guidedSuffixes.find(s => s.name === name)
+              return m ? {name: m.name, text: m.text || m.name, kind: m.kind} : {name, text: name, kind: 'notable'}
+            })
+            if (!prefixMods.length && !suffixMods.length) { alert('Sélectionne au moins un mod.'); return }
+            if (!this.guidedItemPositions.length) { alert("Ajoute au moins une position d'item."); return }
+            config = { mode:'guided', positions:this.gPositions, item_positions:this.guidedItemPositions,
+              prefix_mods:prefixMods, suffix_mods:suffixMods,
+              delay_min:this.gDelayMin, delay_max:this.gDelayMax, max_iterations:this.gMaxIter }
+          }
+          await this.saveConfig()
+          await pywebview.api.start_session(config)
+          this.view = 'log'
+        },
+        async stopSession()  { await pywebview.api.stop_session() },
+        async togglePause() {
+          if (this.status==='paused') await pywebview.api.resume_session()
+          else await pywebview.api.pause_session()
+        },
+        async testClipboard() { await pywebview.api.test_clipboard() },
+
+        async saveConfig() {
+          await pywebview.api.save_config({
+            positions:this.positions, item_positions:this.itemPositions,
+            notables:this.manualNotables.split('\n').map(s=>s.trim()).filter(Boolean),
+            delay_min:this.delayMin, delay_max:this.delayMax, max_iterations:this.maxIter,
+            guided:{size:this.guidedSize, positions:this.gPositions, item_positions:this.guidedItemPositions,
+              delay_min:this.gDelayMin, delay_max:this.gDelayMax, max_iterations:this.gMaxIter}
+          })
+        },
+        applyConfig(c) {
+          if (c.positions) this.positions=c.positions
+          if (c.item_positions) this.itemPositions=c.item_positions.map(p=>Array.isArray(p)?{x:p[0],y:p[1]}:p)
+          if (c.notables) this.manualNotables=c.notables.join('\n')
+          if (c.delay_min!=null) this.delayMin=c.delay_min
+          if (c.delay_max!=null) this.delayMax=c.delay_max
+          if (c.max_iterations!=null) this.maxIter=c.max_iterations
+          const g=c.guided||{}
+          if (g.size) this.guidedSize=g.size
+          if (g.positions) this.gPositions=g.positions
+          if (g.item_positions) this.guidedItemPositions=g.item_positions.map(p=>Array.isArray(p)?{x:p[0],y:p[1]}:p)
+          if (g.delay_min!=null) this.gDelayMin=g.delay_min
+          if (g.delay_max!=null) this.gDelayMax=g.delay_max
+          if (g.max_iterations!=null) this.gMaxIter=g.max_iterations
+        },
+      }))
+    })
+  </script>
+</body>
+</html>

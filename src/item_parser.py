@@ -42,6 +42,51 @@ class ParsedItem:
     def num_suffixes(self) -> int:
         return len(self.suffix_mods)
 
+    def has_mod_by_text(self, template: str) -> bool:
+        """
+        Match a non-notable explicit mod by normalized text + range check.
+        If the template contains a range like +(6—8), the rolled value on the
+        item must fall within [6, 8] — so +(4—5) and +(6—8) are distinct tiers.
+        """
+        def _norm(s: str) -> str:
+            s = re.sub(r'\([^)]*\)', '', s)                 # remove (2—3), (+2 to +5), etc.
+            s = re.sub(r'[+\-]?\d+[\d.,]*\s*%?', '', s)    # remove bare numbers with sign
+            s = re.sub(r'(?<!\w)[+\-](?!\w)', '', s)        # remove lone + or - signs
+            return re.sub(r'\s+', ' ', s).strip().lower()
+
+        norm_tmpl = _norm(template)
+        if not norm_tmpl:
+            return False
+
+        # Extract value bounds from template.
+        # Case 1: explicit range  +(6—8)  → [6, 8]
+        # Case 2: flat value      35%     → [35, 35]  (exact match required)
+        # Case 3: no number               → pure text match
+        range_m = re.search(r'\((\d+)[—\-](\d+)\)', template)
+        if range_m:
+            range_min = int(range_m.group(1))
+            range_max = int(range_m.group(2))
+        else:
+            flat_m = re.search(r'(\d+)', template)
+            if flat_m:
+                v = int(flat_m.group(1))
+                range_min = range_max = v
+            else:
+                range_min = range_max = None
+
+        for mod in self.all_mods:
+            if norm_tmpl not in _norm(mod):
+                continue
+            # Stat type matches; if template specifies a range, verify the rolled value
+            if range_min is not None:
+                val_m = re.search(r'(\d+)', mod)
+                if val_m:
+                    val = int(val_m.group(1))
+                    if not (range_min <= val <= range_max):
+                        continue   # wrong tier — keep looking
+            return True
+        return False
+
     def has_notable(self, name: str) -> bool:
         """
         Check if the item has the given notable.

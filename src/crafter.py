@@ -91,7 +91,183 @@ class CraftSession:
     # Core loop
     # ------------------------------------------------------------------
 
+    @staticmethod
+    def _has_mod(item: "ParsedItem", mod: dict) -> bool:
+        """Check if item has the given mod (notable or non-notable explicit)."""
+        if mod.get("kind") == "notable":
+            return item.has_notable(mod["name"])
+        return item.has_mod_by_text(mod.get("text") or mod.get("name", ""))
+
+    # ------------------------------------------------------------------
+    # Guided craft loop
+    # ------------------------------------------------------------------
+
+    def _run_guided(self):
+        cfg          = self.config
+        max_iter     = cfg.get("max_iterations", 10000)
+        prefix_mods  = cfg.get("prefix_mods", [])   # list of {name, text, kind}
+        suffix_mods  = cfg.get("suffix_mods", [])
+        all_targets  = prefix_mods + suffix_mods
+        positions    = cfg.get("positions", {})
+        wants_prefix = bool(prefix_mods)
+        wants_suffix = bool(suffix_mods)
+
+        self.log("=== Cluster Guidé — session démarrée ===")
+        self.log(f"Préfixes ciblés : {[m.get('name','?') for m in prefix_mods]}")
+        self.log(f"Suffixes ciblés : {[m.get('name','?') for m in suffix_mods]}")
+
+        self.log("Initialisation du bridge Windows…")
+        if not self._win.start():
+            self.log("ERROR: Impossible de démarrer le bridge PowerShell.")
+            return
+        self.log("Bridge OK.")
+
+        self.log("Retournez dans POE maintenant…")
+        for i in range(5, 0, -1):
+            self.log(f"  Démarrage dans {i}s…")
+            if self._stop_event.wait(timeout=1.0):
+                self.log("Arrêt demandé.")
+                return
+        self.status("Running")
+
+        item_positions = cfg.get("item_positions", [])
+        if not item_positions:
+            self.log("ERROR: Aucune position d'item configurée.")
+            return
+
+        total_items = len(item_positions)
+        self.log(f"{total_items} item(s) à crafter.")
+        iteration = 0
+        current_item_idx = 0
+
+        try:
+            while current_item_idx < total_items:
+                if self._stop_event.is_set():
+                    self.log("Arrêt demandé.")
+                    break
+
+                item_pos  = item_positions[current_item_idx]
+                self.log(f"--- Item {current_item_idx+1}/{total_items} | Cycle #{iteration+1} ---")
+
+                if iteration >= max_iter:
+                    self.log(f"⚠ Max itérations atteint pour cet item.")
+                    current_item_idx += 1; iteration = 0; continue
+
+                iteration += 1
+
+                # ── Lire l'état initial ──────────────────────────────────
+                item = self._read_item(item_pos, log_mods=True)
+                if item is None:
+                    self.log("ERROR: Could not read item."); break
+
+                self.log(f"Rareté: {item.rarity} | Affixes: {item.num_affixes}")
+
+                # ── Transmutation si Normal ──────────────────────────────
+                if item.rarity == "Normal":
+                    self.log("Transmutation…")
+                    self._apply_currency(positions["transmutation"], item_pos)
+                    self.count_transmutations += 1
+                    self._wait()
+                    item = self._read_item(item_pos, expect_change=True)
+                    if item is None:
+                        self.log("ERROR: Could not read item after Transmutation."); break
+                    if item.rarity == "Normal":
+                        self.log("ERROR: Item still Normal after Transmutation — vérifiez les positions (transmutation/item).")
+                        break
+
+                # ── Boucle Alteration ────────────────────────────────────
+                alt_count = 0
+                while not self._stop_event.is_set():
+                    self._apply_currency(positions["alteration"], item_pos)
+                    self.count_alterations += 1; alt_count += 1
+                    self._wait()
+                    item = self._read_item(item_pos, expect_change=True)
+                    if item is None:
+                        self.log("ERROR: Could not read item during alt."); self._stop_event.set(); break
+
+                    has_p = any(self._has_mod(item, m) for m in prefix_mods) if wants_prefix else True
+                    has_s = any(self._has_mod(item, m) for m in suffix_mods) if wants_suffix else True
+
+                    # Augmentation : 1 seul affix trouvé + on veut l'autre type
+                    if item.num_affixes == 1:
+                        actual_p = wants_prefix and any(self._has_mod(item, m) for m in prefix_mods)
+                        actual_s = wants_suffix and any(self._has_mod(item, m) for m in suffix_mods)
+                        if (actual_p and wants_suffix) or (actual_s and wants_prefix):
+                            self.log("Augmentation (affix trouvé, on complète)…")
+                            self._apply_currency(positions["augmentation"], item_pos)
+                            self.count_augmentations += 1
+                            self._wait()
+                            item = self._read_item(item_pos, expect_change=True)
+                            if item is None:
+                                self.log("ERROR: Could not read item after Aug."); self._stop_event.set(); break
+                            has_p = any(self._has_mod(item, m) for m in prefix_mods) if wants_prefix else True
+                            has_s = any(self._has_mod(item, m) for m in suffix_mods) if wants_suffix else True
+
+                    found = [m.get("name","?") for m in all_targets if self._has_mod(item, m)]
+                    self.log(f"  [alt #{alt_count}] rarity={item.rarity} mods={item.all_mods} ✓{found}")
+
+                    if has_p and has_s:
+                        self.log(f"✓ Mods cibles trouvés après {alt_count} alt(s): {found}")
+                        break
+
+                if self._stop_event.is_set():
+                    break
+
+                # ── Regal ────────────────────────────────────────────────
+                self.log("Regal Orb…")
+                self._apply_currency(positions["regal"], item_pos)
+                self.count_regals += 1
+                self._wait()
+                item = self._read_item(item_pos, expect_change=True)
+                if item is None:
+                    self.log("ERROR: Could not read item after Regal."); break
+
+                # ── Exalted ──────────────────────────────────────────────
+                # Skip si déjà 2 préfixes (exalt ne pourrait qu'ajouter un suffixe)
+                has_affix_info = bool(item.prefix_mods or item.suffix_mods)
+                if has_affix_info and item.num_prefixes >= 2 and not wants_suffix:
+                    self.log("Skip Exalt (2 préfixes, pas de suffixe ciblé).")
+                else:
+                    self.log("Exalted Orb…")
+                    self._apply_currency(positions["exalted"], item_pos)
+                    self.count_exalteds += 1
+                    self._wait()
+                    item = self._read_item(item_pos, expect_change=True)
+                    if item is None:
+                        self.log("ERROR: Could not read item after Exalt."); break
+
+                # ── Vérification finale ───────────────────────────────────
+                self.log(f"Mods finaux: {item.all_mods}")
+                if all(self._has_mod(item, m) for m in all_targets):
+                    self.log(f"✅ SUCCÈS item {current_item_idx+1}/{total_items}")
+                    self.count_items_crafted += 1
+                    self._print_stats()
+                    current_item_idx += 1; iteration = 0
+                    if current_item_idx < total_items:
+                        self.log(f"→ Item {current_item_idx+1}/{total_items}…")
+                else:
+                    self.count_full_cycles += 1
+                    self.log("✗ Pas tous les mods. Scouring…")
+                    self._apply_currency(positions["scouring"], item_pos)
+                    self.count_scourings += 1
+                    self._wait()
+
+            if current_item_idx >= total_items:
+                self.log(f"🎉 Tous les items craftés ({total_items}/{total_items}) !")
+                self.status("Done ✅")
+
+        except Exception as e:
+            self.log(f"EXCEPTION: {e}")
+        finally:
+            self._win.close()
+            self.status("Stopped")
+            self._print_stats()
+            self.log("=== Session terminée ===")
+
     def _run(self):
+        if self.config.get("mode") == "guided":
+            return self._run_guided()
+
         cfg = self.config
         max_iter = cfg.get("max_iterations", 10000)
         required = cfg.get("required_notables", [])
